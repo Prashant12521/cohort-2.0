@@ -1,0 +1,8 @@
+Day:- 16 (More in CSS)
+
+Boiler plate of css
+box sizing: border-box
+transform: translateX, translateY, translateZ, rotate(), rotateX(), rotateZ(); 
+perspectives property
+background: linear gradient (transparent black)
+transition: all ease 0.8s;

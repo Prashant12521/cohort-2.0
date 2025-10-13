@@ -1,0 +1,18 @@
+Day:- 11 (More on CSS)
+
+background:
+linear-gradient(red, green, blue);
+radial-gradient(red, green, orange);
+conic-gradient(orange, white, green); 
+
+background-image: url(link);
+background-size: cover; —-width wise
+background-size: contain; —-height wise
+background-repeat: no-repeat; —-no repeat
+background-position: center;
+
+margin - Imaginery space outside the box
+padding - Imaginery space inside the box
+
+border: 5px dashed white;
+border-radius: 30px;

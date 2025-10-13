@@ -1,0 +1,10 @@
+Day:- 13 (flex box, align items, justify content)
+
+
+Display: flex;
+
+Align-items: flex-start/centre/flex-end; ———Y-axis
+
+Justify-content: flex-start/center/flex-end/space-between/space-evenly/space-around; ——-X-axis
+
+Gap:10px;

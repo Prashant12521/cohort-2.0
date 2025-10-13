@@ -1,0 +1,46 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+}
+
+.container {
+  height: 100vh;
+  width: 100%;
+  background-color: #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.slide-text {
+  font-size: 150px;
+  font-weight: 800;
+  color: #fff;
+  letter-spacing: 5px;
+  opacity: 0;
+  transform: translate(150%, 150%) rotate(10deg);
+  animation: slideIn 2s ease-out forwards;
+}
+
+/* 👇 Animation for sliding in from bottom-right to center */
+@keyframes slideIn {
+  0% {
+    opacity: 0;
+    transform: translate(150%, 150%) rotate(10deg);
+  }
+  70% {
+    opacity: 1;
+    transform: translate(-10%, -10%) rotate(-2deg);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0, 0) rotate(0deg);
+  }
+}

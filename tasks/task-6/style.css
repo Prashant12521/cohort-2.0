@@ -1,0 +1,61 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+
+#main{
+  height: 100%;
+  width: 100%;
+  background-image: url("https://r4.wallpaperflare.com/wallpaper/322/848/879/one-piece-brook-one-piece-choper-franky-one-piece-monkey-d-luffy-hd-wallpaper-99e0586db1ba3d5b4647e88f70c1867d.jpg");
+  background-size: cover;
+  background-position: top;
+}
+
+#container{
+  height: 100%;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-start;
+  flex-wrap: nowrap;
+  gap: 13px;
+  overflow: auto;
+  padding: 10px;
+}
+#container::-webkit-scrollbar{display: none;}
+
+.card{
+  height: 285px;
+  width: 230px;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+.card img{
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 13px;
+}
+.details{
+  height: 20%;
+  width: 100%;
+  background: linear-gradient(transparent, black);
+  border-radius: 13px;
+  color: #fff;
+  text-align: center;
+}
+.details h3{
+  font-size: 25px;
+}
+.details h5{
+  font-size: 15px;
+}
+.card:hover .details{
+  transform: translateY(-105%);
+  transition: all ease 0.5s;
+}

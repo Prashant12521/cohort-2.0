@@ -1,0 +1,33 @@
+Day:- 15 (Layout Behaviour | Display Property In Details)
+
+
+Position: Absolute;
+Transform: translateX(50%);
+Transform: translateY(50%);
+Transform: translate(-50%, -50%);
+Clip-path: polygon(50% 0%, 0% 100% 100% 100%);
+Clip-path property is used to give any shape to the div. We use google to get the value for desired shape.
+Display: flex;
+Align-items: center;
+Justify-content: center;
+Align items → cross axis
+Justify-content → main axis
+By default flex direction is row ——
+Display: flex;
+Flex-direction: column;
+Align-items: center;
+Justify-content: center;
+Align-items: cross axis
+Justify-content: main axis
+Column direction means this way |
+Flex-wrap: wrap;
+Flex-shrink: 0;
+Flex-shrink: 1; —- is default
+Flex-shrink: 2; —- will double shrink
+Overflow: auto/hidden;
+Box-shadow: 10px 10px 20px black;
+Box-shadow: X Y blur colour;
+
+Background-size: cover;
+Object-fit: cover;
+object fit works in img tag while bg-size work for background Img

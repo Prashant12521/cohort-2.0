@@ -1,0 +1,16 @@
+Day:- 5 (Git)
+
+Git is a Version Control System (VCS).
+It is an open source tool that helps us to track changes to code over time.
+
+
+Features:
+
+* Record history -> Every change we make (add, modify, delete) can be saved as a “commit” with a message.
+* Revert mistakes -> If something breaks, you can roll back to an earlier version.
+* Work in parellel -> Multiple people can work on the same project without overwriting each other’s work.
+* Experiment safely -> We can create brenches to test new features or fixes, without touching the main code until you’re ready.
+* Collaborate easily -> When combined with platforms like GitHub, GitLab, or Bitbucket; it makes sharing and merging code straightforward.
+
+
+Git = A Time Machine + Collaboration Tool for Code.

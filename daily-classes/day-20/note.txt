@@ -1,0 +1,108 @@
+Day:- 20
+
+
+SCSS
+Sassy CSS is a superset of CSS. It extends its capabilities with features that enhance efficiency and maintainability in web development.
+
+1. Nesting
+* In SCSS, you can write selectors inside other selectors.
+* This mimics the structure of your HTML and makes code cleaner.
+
+Index.html
+Main-section-h1, btn1,btn2
+
+Main{
+Height: 100%;
+Width: 100%;
+Background-color: black;
+
+Section{
+Height: 50%;
+Width: 50%;
+Background-color: blue;
+
+H1{
+Color: red;
+}
+}
+}
+
+2. Mixins
+* A mixin is like a reusable styles for CSS rules.
+* Helps avoid code repetition.
+* Can take arguments to make it dynamic.
+
+@mixin flexCenter(){
+Display: flex;
+Justify-content: center;
+Align-items: center;
+}
+@mixin button-style($bg-color){
+Padding: 20px 30px;
+Background-color: $bg-color;
+}
+Main{
+Height: 100%;
+Width: 100%;
+Background-color: black;
+@include flexCenter();
+
+Section{
+Height: 50%;
+Width: 50%;
+Background-color: blue;
+@include flexCenter();
+
+H1{
+Color: red;
+}
+
+#btn1{
+@include button-style(blue);
+}
+#btn2{
+@include button-style(red);
+}
+}
+}
+
+3. Partials & Imports
+* Partials: Small SCSS files (start with ) to split your code (e.g., _header.scss, _footer.scss).
+* Imports: Use @import to bring all partials into one main file.
+* Keeps project modular & easy to maintain.
+
+1. index.html - Main-section-h1, btn1,btn2
+2. Style.css - scss extension
+3. Style.scss
+4. _button.scss
+
+_button.scss
+@mixin button-style($bg-color: blue, $text-color: white, $font-size: 18px){
+Padding: 15px 30px;
+Background-color: $bg-color;
+Color: $text-color;
+Border: none;
+Cursor: pointer;
+Font-size: $text-size;
+Outline: none;
+}
+
+Style.scss -
+@import “button”;
+*{
+Margin: 0;
+Padding: 0;
+Box-sixing:border-box;
+}
+Html,body{
+Height:100%;
+Width:100%;
+}
+.btn1{
+@include button-style(blue, white, 18px);
+}
+.btn2{
+@include button-style(red, white, 20px);
+}
+
+Flex-grow:1;

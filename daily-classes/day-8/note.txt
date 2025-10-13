@@ -1,0 +1,29 @@
+Day:- 8 (Starting with HTML)
+
+Web Development
+
+Frontend
+
+HTML
+It is used to incert content (text, images, videos) in the website. It is the skeleton of the website. Also used to manage SEO of website.
+
+CSS
+Styling, Makes our website beautiful
+
+JS
+logic, funcality
+
+Files and Folder
+files is the single type of data liike image.jpg, notes.txt, music.mp3, video.mp4
+Here image is file name and .txt is file type; and we can change file name but we can’t change file type.
+Folder is the collection of files.
+
+HTML
+Hyper Text Markup Language
+HTML is a markup language not programming language and markup language include <>.
+<p> - tag which is p tag
+</p>- p tag closing
+Boiler Plate - It is prewritten code which we have to write it brfore writing our code.
+In head tag we store information of our website
+In body tag we put content of the website
+anchor tag is used to create hyperlink.

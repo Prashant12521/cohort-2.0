@@ -1,0 +1,86 @@
+@font-face {
+  font-family: killer;
+  src: url(font/DeadlyKillers-K7RxX.ttf);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+
+#main{
+  height: 100%;
+  width: 100%;
+  background-image: url(https://r4.wallpaperflare.com/wallpaper/921/745/240/blood-dexter-wallpaper-47e9ea1be65a5525cc2de8707897d953.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
+#show{
+  font-family: killer;
+  font-size: 50px;
+  letter-spacing: 5px;
+  text-align: center;
+  color: rgb(120, 9, 9);
+  background: rgba(166, 131, 131, 0.051);
+  backdrop-filter: blur(2px);
+  position: absolute;
+  bottom: 15px;
+  right:20px;
+}
+
+#container{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  padding: 25px;
+  position: absolute;
+  flex-wrap: wrap;
+}
+
+.box{
+  height: 350px;
+  width: 230px;
+  padding: 20px 25px;
+  background-color: hsla(0, 0%, 100%, 0.677);
+  text-align: center;
+  border-radius: 15px;
+  Box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.663);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+}
+.box img{
+  height: 170px;
+  width: 140px;
+  object-fit: cover;
+  border-radius: 25px;
+}
+.box h1{
+  font-size: 22px;
+}
+.box h2{
+  font-size: 18px;
+  color: #1f1f1fb1;
+}
+.box button{
+  padding: 13px 18px;
+  font-size: 16px;
+  background-color: royalblue;
+  border: 2px solid royalblue;
+  color: white;
+  border-radius: 25px;
+  cursor: pointer;
+}
+.box button:hover{
+  background-color: white;
+  color: royalblue;
+}

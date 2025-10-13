@@ -1,0 +1,20 @@
+Git config —global user.name(https://user.name) “Prashant”
+
+Git config —global user.name.email(https://user.name) “prashant120@gmail.com”
+
+
+U => Untracked
+M => Modified
+A => Added/Track
+
+git add .
+
+git commit -m “first commit“
+
+git add style.css
+
+Git commit -m “second commit”
+
+git add .
+
+ git commit -m “third commit“

@@ -1,0 +1,10 @@
+Day:- 9 (More about HTML)
+cmd + D :- select multiple same text
+<a target=”_blank” href=”hhtps…..”>shery</a>
+target=”_blank” :— open in new tab
+<img height=”100” src=”panda.jpg” alt=”Image not found”>
+<video autoplay loop muted controls height=”100” src=”./earth.mp4”></video>
+<br>
+<audio controls src=”./song.mp3”></audio>
+<br>
+<iframe src=”https://sheryians.com/” frameborder=”0”></iframe>

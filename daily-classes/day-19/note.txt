@@ -1,0 +1,14 @@
+Day:- 19 (Units)
+
+
+Units
+1. Px (pixels) - fixed
+2. % - depends on parent
+3. vh (viewport height) - depends on viewport’s height. 1vh = 1% of viewport width; 50vh = 50% of screen height; same goes for vw
+4. vw (viewport width) - depends on viewport’s width
+5. vmax (viewport maximum) - depends on maximum viewport
+6. vmin (viewport minimum) - depends on minimum viewport
+7. em - depents on size of element’s parent; if parents size is 20px then 1em = 20px, 2em = 40px.
+8. rem - depends on size of root element (<html>)
+
+task - https://dribbble.com/shots/21661002-AI-Project-Showcase-Landing-Page
