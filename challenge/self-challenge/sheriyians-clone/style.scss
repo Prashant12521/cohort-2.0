@@ -1,0 +1,75 @@
+@font-face {
+  font-family: neu;
+  src: url(./fonts/NeueMachina-Regular_DQCmjH1st.ttf);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html,
+body {
+  height: 100%;
+  width: 100%;
+  color: #fff;
+}
+
+main{
+  height: 100%;
+  width: 100%;
+  background-color: #111;
+
+
+  nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 14px 70px;
+
+    #nav1{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 20px;
+
+      img{
+        height: 40px;
+      }
+
+      h4{
+        font-family: neu;
+        font-size: 14.5px;
+        line-height: 1.4;
+        font-weight: 100;
+      }
+    }
+
+    #nav2{
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 48px;
+
+      h4{
+        font-family: neu;
+        font-size: 14px;
+        cursor: pointer;
+        font-weight: 100;
+      }
+      .kod{
+        font-size: 16px;
+        font-weight: 900;
+      }
+
+      button{
+        padding: 10px 22px;
+        background-color: #23CFA5;
+        border: none;
+        border-radius: 3px;
+        font-size: 16px;
+      }
+    }
+  }
+
+}
