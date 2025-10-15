@@ -1,0 +1,60 @@
+@mixin bgi-center {
+  background-size: cover;
+  background-position: center;
+  border-radius: 20px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+
+main{
+  height: 100%;
+  width: 100%;
+  background-color: black;
+  padding: 20px;
+
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  grid-template-areas: "left right right right"
+                       "left btm-left btm-bet btm-right";
+  gap: 10px;                       
+
+  #left{
+    @include bgi-center;
+    background-image: url(https://r1.ilikewallpaper.net/iphone-12-pro-max-wallpapers/download-109660/Levi-Ackermann-Red-moon.jpg);
+    grid-area: left;
+  }
+
+  #right{
+    @include bgi-center;
+    background-image: url(https://t4.ftcdn.net/jpg/13/57/24/07/360_F_1357240730_5qwRRFPbwIS2URtqsDAdq05YKRN0LHMD.jpg);
+    grid-area: right;
+  }
+
+  #btm-left{
+    @include bgi-center;
+    background-image: url(https://i.pinimg.com/236x/46/76/9e/46769e7760dfd1db22379cab8954614f.jpg);
+    grid-area: btm-left;
+  }
+
+  #btm-bet{
+    @include bgi-center;
+    background-image: url(https://img2.wallspic.com/crops/6/2/9/4/7/174926/174926-chihiro_ogino-haku-anime-anime_art-poster-2252x3960.jpg);
+    grid-area: btm-bet;
+  }
+
+  #btm-right{
+    @include bgi-center;
+    background-image: url(https://w0.peakpx.com/wallpaper/306/277/HD-wallpaper-anime-huashijw-torii-night-sky.jpg);
+    grid-area: btm-right;
+  }
+}
