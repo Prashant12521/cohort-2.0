@@ -1,0 +1,52 @@
+Day:- 21 (Baatchit & Guidance Session)
+
+Day:- 22(Responsive)
+
+
+Units
+Absolute Units - fixed values
+* px
+* pt
+* cm
+* mm
+* in
+
+Relative Units - depends on something
+* em
+* rem
+* %
+* vw
+* vh
+* vmin
+* vmax
+* ch
+* ex
+
+vw = viewport’s width
+vh = viewport’s height
+
+let’s say me screen’s viewport width and height = 500px and 600px
+100vw => full viewport width = 500px
+100vh => full viewport height = 600px
+
+rem unit is relative unit. It depends on the root element i.e. html.
+default font size of html element of html is 16px.
+1rem = 16px
+
+Html{Font-size: 40px}
+1rem = 40px
+
+
+em unit is depends on the nearest anchestor of that element.
+Html > body > main > section > h1
+if html => 40px, body => 50px,
+Main => 100px, section => 200px
+Then h1 => 1em = 200px
+
+% - depends on parent’s dimensions
+
+Fluid Typography
+Responsive typography → clamp() with vw and px
+clamp(lowerLimit, value, upperLimit)
+clamp(14px, 1vw, 1px)
+
