@@ -69,12 +69,27 @@ main{
           line-height: 1.5;
         }
 
-        button{
-          width: fit-content;
-          border: none;
-          outline: none;
-          padding: 0.7rem 1rem;
-          border-radius: 0.5rem;
+        .btn{
+          display: flex;
+          gap: 1rem;
+          padding: 1rem 0;
+          
+          i{
+            width: fit-content;
+            background-color: #292929;
+            border-radius: 50%;
+            border: 0.5px solid white;
+            padding: 0.5rem;
+            font-size: 1.5rem;
+          }
+
+          button{
+            width: fit-content;
+            border: none;
+            outline: none;
+            padding: 0.7rem 1rem;
+            border-radius: 0.5rem;
+          }
         }
         
       }
@@ -148,6 +163,24 @@ main{
     }
     .bottom>p{
       text-transform: uppercase;
+    }
+  }
+
+  section.view3t{
+    width: 100%;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+
+    h1{
+      font-size: 2.5rem;
+      text-transform: uppercase;
+      font-weight: 200;
+      padding: 0 1rem;
+    }
+
+    .btn{
+      display: none;
     }
   }
 
@@ -233,7 +266,7 @@ main{
 
           p{
             width: 60%;
-            font-size: 1rem;
+            font-size: 1.5rem;
           }
         }
       }
@@ -272,8 +305,38 @@ main{
           gap: 2rem;
 
           p{
-            font-size: 1rem;
+            font-size: 1.5rem;
           }
+        }
+      }
+    }
+
+    section#view3s{
+      flex-direction: row;
+    }
+
+    section.view3t{
+
+      .btn{
+        display: flex;
+        gap: 1rem;
+        padding: 1rem 0;
+        
+        i{
+          width: fit-content;
+          background-color: #292929;
+          border-radius: 50%;
+          border: 0.5px solid white;
+          padding: 0.5rem;
+          font-size: 1.5rem;
+        }
+
+        button{
+          width: fit-content;
+          border: none;
+          outline: none;
+          padding: 0.7rem 1rem;
+          border-radius: 0.5rem;
         }
       }
     }

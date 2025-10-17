@@ -68,7 +68,21 @@ main section.view1 .bottom .text p {
   opacity: 0.6;
   line-height: 1.5;
 }
-main section.view1 .bottom .text button {
+main section.view1 .bottom .text .btn {
+  display: flex;
+  gap: 1rem;
+  padding: 1rem 0;
+}
+main section.view1 .bottom .text .btn i {
+  width: -moz-fit-content;
+  width: fit-content;
+  background-color: #292929;
+  border-radius: 50%;
+  border: 0.5px solid white;
+  padding: 0.5rem;
+  font-size: 1.5rem;
+}
+main section.view1 .bottom .text .btn button {
   width: -moz-fit-content;
   width: fit-content;
   border: none;
@@ -141,6 +155,21 @@ main section.view3 .bottom .text p {
 }
 main section.view3 .bottom > p {
   text-transform: uppercase;
+}
+main section.view3t {
+  width: 100%;
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+}
+main section.view3t h1 {
+  font-size: 2.5rem;
+  text-transform: uppercase;
+  font-weight: 200;
+  padding: 0 1rem;
+}
+main section.view3t .btn {
+  display: none;
 }
 main section.view4 {
   display: flex;
@@ -215,7 +244,7 @@ main section.view4 .card3 {
   }
   main section.view1 .bottom .text p {
     width: 60%;
-    font-size: 1rem;
+    font-size: 1.5rem;
   }
   main section.view2 {
     flex-direction: row;
@@ -245,7 +274,32 @@ main section.view4 .card3 {
     gap: 2rem;
   }
   main section.view3 .bottom .paragraphs p {
-    font-size: 1rem;
+    font-size: 1.5rem;
+  }
+  main section#view3s {
+    flex-direction: row;
+  }
+  main section.view3t .btn {
+    display: flex;
+    gap: 1rem;
+    padding: 1rem 0;
+  }
+  main section.view3t .btn i {
+    width: -moz-fit-content;
+    width: fit-content;
+    background-color: #292929;
+    border-radius: 50%;
+    border: 0.5px solid white;
+    padding: 0.5rem;
+    font-size: 1.5rem;
+  }
+  main section.view3t .btn button {
+    width: -moz-fit-content;
+    width: fit-content;
+    border: none;
+    outline: none;
+    padding: 0.7rem 1rem;
+    border-radius: 0.5rem;
   }
   main section.view4 {
     flex-direction: row;
