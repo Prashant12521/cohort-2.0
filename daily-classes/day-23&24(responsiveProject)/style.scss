@@ -16,6 +16,7 @@ html{
 
 body{
   background-color: #121212;
+  padding: 1rem;
 }
 
 @mixin flex-column($gap: 0rem){
@@ -154,7 +155,7 @@ main{
 
         p{
           font-weight: 100;
-          font-size: 1.5rem;
+          font-size: 1rem;
           opacity: 0.6;
           line-height: 1.5;
         }
@@ -237,6 +238,113 @@ main{
       background-image: url(./pictures/card3.webp);
     }
   }
+
+  section.view5{
+    width: 100%;
+    padding: 0 1rem;
+    @include flex-column(1rem);
+
+    .top{
+      width: 100%;
+      img{
+        width: 100%;
+        border-radius: 0.7rem;
+      }
+    }
+
+    .bottom{
+      background-color: #1E1E1E;
+      border-radius: 0.7rem;
+      padding: 1rem;
+      @include flex-column(3rem);
+
+      .text{
+        text-transform: uppercase;
+        p{
+          padding: 0.5rem;
+        }
+        h1{
+          padding: 0.5rem;
+          font-size: 2.5rem;
+          font-weight: 200;
+        }
+
+      }
+
+      .btn{
+        display: flex;
+        gap: 1rem;
+        padding: 1rem 0.5rem;
+        
+        i{
+          width: fit-content;
+          background-color: #292929;
+          border-radius: 50%;
+          border: 0.5px solid white;
+          padding: 0.5rem;
+          font-size: 1.5rem;
+        }
+
+        button{
+          width: fit-content;
+          border: none;
+          outline: none;
+          padding: 0.7rem 1rem;
+          border-radius: 0.5rem;
+          text-transform: uppercase;
+        }
+      }
+    }
+  }
+
+  section.view6{
+    width: 100%;
+    padding: 1rem;
+
+    .box{
+      background-color: #CDBD63;
+      color: black;
+      border-radius: 0.7rem;
+      padding: 1.5rem;
+      @include flex-column(1rem);
+
+      .text{
+        text-transform: uppercase;
+        p{
+          font-weight: 300;
+        }
+        h1{
+          padding: 0.5rem 0rem;
+          font-size: 2.6rem;
+          font-weight: 200;
+        }
+
+      }
+
+      .btn{
+        background-color: #121212;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 0.5rem;
+        padding: 1rem 0.5rem;
+        border-radius: 0.7rem;
+        
+        p{
+          background-color: transparent;
+          color: #fff;
+          border: none;
+          text-transform: uppercase;
+          font-weight: 300;
+        }
+        i{
+          color: #fff;
+          font-size: 1.5rem;
+
+        }
+      }
+    }
+  }
     
 }
 
@@ -311,7 +419,7 @@ main{
       }
     }
 
-    section#view3s{
+    section#view3s,#view5{
       flex-direction: row;
     }
 
@@ -343,6 +451,35 @@ main{
 
     section.view4{
       flex-direction: row;
+    }
+
+    section.view5{
+      flex-direction: row;
+      .top,.bottom{
+        width: 50%;
+      }
+
+      .bottom{
+        justify-content: space-between;
+        padding: 3rem;
+      }
+    }
+
+    section.view6{
+      .box{
+        flex-direction: row;
+        justify-content: space-between;
+
+        .text{
+          h1{
+            font-size: 5rem;
+            padding-right: 2rem;
+          }
+        }
+        .btn{
+          align-items: flex-end;
+        }
+      }
     }
 
   }
