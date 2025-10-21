@@ -323,6 +323,98 @@ main section.view6 .box .btn i {
   color: #fff;
   font-size: 1.5rem;
 }
+main footer {
+  width: 100%;
+  padding: 0 1rem 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+main footer h5 {
+  font-size: 1.5rem;
+  font-weight: 200;
+  text-transform: uppercase;
+}
+main footer p {
+  font-size: 1rem;
+  color: #aca9a9;
+  text-transform: uppercase;
+  font-weight: 200;
+}
+main footer .alvy {
+  background-color: #1E1E1E;
+  padding: 1.5rem;
+  border-radius: 0.7rem;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  justify-content: space-between;
+}
+main footer .alvy .social {
+  display: flex;
+  gap: 0.5rem;
+}
+main footer .alvy .social i {
+  font-size: 1.5rem;
+  background-color: #3f3c3c;
+  border: 0.5px solid rgba(255, 255, 255, 0.5803921569);
+  padding: 0.5rem;
+  border-radius: 50%;
+}
+main footer .box {
+  padding: 1.5rem;
+  background-color: #1E1E1E;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+main footer .box .pages {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+main footer .box .pages .btn {
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 1rem;
+  background-color: #CDBD63;
+  border-radius: 0.7rem;
+  color: #121212;
+  font-weight: 300;
+}
+main footer .info {
+  background-color: #1E1E1E;
+  border-radius: 0.7rem;
+  text-align: center;
+  padding: 1.5rem;
+  text-transform: uppercase;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+main footer .info .info1 {
+  color: #aca9a9;
+  font-weight: 200;
+}
+main footer .info .info1 a {
+  color: #fff;
+}
+main footer .info h6 {
+  font-size: 1rem;
+  padding: 0.5rem;
+  font-weight: 300;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+main footer .info h6 i {
+  font-size: 1.5rem;
+  padding: 0.5rem;
+  background-color: rgba(55, 53, 53, 0.5921568627);
+  border-radius: 50%;
+  border: 1px solid #aca9a9;
+}
 
 @media (min-width: 900px) {
   main section.view1 {
@@ -426,6 +518,29 @@ main section.view6 .box .btn i {
     font-size: 4rem;
   }
   main section.view6 .box .btn {
+    padding: 0;
+    white-space: nowrap;
     padding: 0.5rem 3rem;
+  }
+  main footer {
+    display: grid;
+    grid-template-columns: 0.5fr 3fr;
+    grid-template-rows: 2.5fr 0.5fr;
+    grid-template-areas: "alvy box" "alvy info";
+    gap: 1rem;
+  }
+  main footer .alvy {
+    grid-area: alvy;
+  }
+  main footer .box {
+    grid-area: box;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+  main footer .info {
+    grid-area: info;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
   }
 }/*# sourceMappingURL=style.css.map */

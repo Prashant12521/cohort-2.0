@@ -345,6 +345,99 @@ main{
       }
     }
   }
+
+  footer{
+    width: 100%;
+    padding: 0 1rem 1rem;
+    @include flex-column(1rem);
+    h5{
+      font-size: 1.5rem;
+      font-weight: 200;
+      text-transform: uppercase;
+    }
+    p{
+      font-size: 1rem;
+      color: #aca9a9;
+      text-transform: uppercase;
+      font-weight: 200;
+    }
+
+    .alvy{
+      background-color: #1E1E1E;
+      padding: 1.5rem;
+      border-radius: 0.7rem;
+      @include flex-column(3rem);
+      justify-content: space-between;
+
+      .social{
+        display: flex;
+        gap: 0.5rem;
+
+        i{
+          font-size: 1.5rem;
+          background-color: #3f3c3c;
+          border: 0.5px solid #ffffff94;
+          padding: 0.5rem;
+          border-radius: 50%;
+        }
+      }
+    }
+
+    .box{
+      padding: 1.5rem;
+      background-color: #1E1E1E;
+      @include flex-column(2rem);
+
+      .pages{
+        @include flex-column(1.5rem);
+
+        .btn{
+          width: fit-content;
+          padding: 1rem;
+          background-color: #CDBD63;
+          border-radius: 0.7rem;
+          color: #121212;
+          font-weight: 300;
+        }
+      }
+    }
+
+    .info{
+        background-color: #1E1E1E;
+        border-radius: 0.7rem;
+        text-align: center;
+        padding: 1.5rem;
+        text-transform: uppercase;
+        @include flex-column(1.5rem);
+
+        .info1{
+          color: #aca9a9;
+          font-weight: 200;
+
+          a{
+            color: #fff;
+          }
+        }
+
+        h6{
+          font-size: 1rem;
+          padding: 0.5rem;
+          font-weight: 300;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          gap: 1rem;
+
+          i{
+            font-size: 1.5rem;
+            padding: 0.5rem;
+            background-color: #37353597;
+            border-radius: 50%;
+            border: 1px solid #aca9a9;
+          }
+        }
+      }
+  }
     
 }
 
@@ -478,12 +571,39 @@ main{
             font-size: 4rem;
           }
         }
-        
+
         .btn{
+          padding: 0;
+          white-space: nowrap;
           padding: 0.5rem 3rem;
         }
       }
     }
 
+    footer{
+      display: grid;
+      grid-template-columns: 0.5fr 3fr;
+      grid-template-rows: 2.5fr 0.5fr;
+      grid-template-areas: "alvy box"
+                           "alvy info";
+      gap: 1rem;
+
+      .alvy{
+        grid-area: alvy;
+      }
+
+      .box{
+        grid-area: box;
+        flex-direction: row;
+        justify-content: space-around;
+      }
+
+      .info{
+        grid-area: info;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+      }
+    }
   }
 }
