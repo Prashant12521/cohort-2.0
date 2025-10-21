@@ -317,7 +317,7 @@ main section.view6 .box .btn p {
   color: #fff;
   border: none;
   text-transform: uppercase;
-  font-weight: 300;
+  font-weight: 200;
 }
 main section.view6 .box .btn i {
   color: #fff;
@@ -418,12 +418,14 @@ main section.view6 .box .btn i {
   main section.view6 .box {
     flex-direction: row;
     justify-content: space-between;
+    align-items: flex-end;
+    gap: 4rem;
+    padding: 3.5rem;
   }
   main section.view6 .box .text h1 {
-    font-size: 5rem;
-    padding-right: 2rem;
+    font-size: 4rem;
   }
   main section.view6 .box .btn {
-    align-items: flex-end;
+    padding: 0.5rem 3rem;
   }
 }/*# sourceMappingURL=style.css.map */
