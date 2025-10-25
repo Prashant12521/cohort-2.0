@@ -1,0 +1,360 @@
+// ======================================================
+// 🟩 JAVASCRIPT DEVELOPER NOTEBOOK: DAY 2
+// ======================================================
+// 🧭 TOPIC: Variables, Declarations & Data Types
+// ======================================================
+//
+// In this chapter, we’ll cover:
+// 1️⃣ var, let, const
+// 2️⃣ Block scope vs Functional scope
+// 3️⃣ Reference vs Primitive data types
+// 4️⃣ Type system, coercion, truthy/falsy values
+// 5️⃣ Useful string & console methods
+// ======================================================
+
+// ======================================================
+// 🔹 TOPIC 1: var, let, and const
+// ======================================================
+//
+// var → function-scoped, can be redeclared & reassigned
+// let → block-scoped, cannot be redeclared but can be reassigned
+// const → block-scoped, cannot be redeclared or reassigned
+//
+// Errors help you write cleaner code. As your teacher said:
+// ❝Dusman error nahi hai, dusman hai wo code jo galat ho
+// par error na de.❞
+
+🧠 PRACTICE:
+if (true) {
+  var a = 1;
+  let b = 2;
+  console.log(a); // ✅ Works → 1
+  console.log(b); // ✅ Works → 2
+}
+console.log(a); // ✅ 1
+// console.log(b); // ❌ ReferenceError
+
+// 🧾 OUTPUT:
+// 1
+// 2
+// 1
+// ❌ ReferenceError (b is not defined)
+
+// 🧠 EXPLANATION:
+// var is functional scope — if no function, it leaks outside the block.
+// let is block-scoped — respects {} braces.
+
+
+// ======================================================
+// 🔹 TOPIC 2: const and Object Mutability
+// ======================================================
+//
+// const = constant reference, not constant value
+// You can modify the content of an object or array declared with const,
+// but cannot reassign the entire variable.
+
+const person = { name: "Harsh" };
+person.name = "Sharma"; // ✅ allowed
+// person = {}; // ❌ Error → cannot reassign const
+
+// 🧾 OUTPUT:
+// person = { name: "Sharma" }
+
+//
+// 🧠 WHY?
+// const locks the variable binding, not the content of the object.
+// So you can modify object properties but not reassign it.
+//
+// To freeze object changes completely:
+Object.freeze(person);
+person.name = "Changed"; // ❌ will be ignored
+
+// 🧾 OUTPUT:
+// { name: "Sharma" } (unchanged)
+
+
+// ======================================================
+// 🔹 TOPIC 3: Reference vs Primitive Types
+// ======================================================
+//
+// Primitive types are copied by value.
+// Reference types are copied by reference (memory address).
+
+// 🔸 Primitive Example:
+let x = 12;
+let y = x;
+x = x + 3;
+console.log(x, y);
+// 🧾 OUTPUT: 15 12
+
+// 🔸 Reference Example:
+let arr1 = [1, 2, 3];
+let arr2 = arr1;
+arr2.pop();
+console.log(arr1, arr2);
+// 🧾 OUTPUT: [1, 2] [1, 2]
+//
+// Both changed because both reference the same memory address.
+
+// 🔸 Object Reference:
+let obj1 = { name: "Harsh" };
+let obj2 = obj1;
+obj2.name = "Harshita";
+console.log(obj1.name, obj2.name);
+// 🧾 OUTPUT: Harshita Harshita
+// ======================================================
+
+
+// ======================================================
+// 🔹 TOPIC 4: Data Types in JS
+// ======================================================
+//
+// JS has 2 categories of data types:
+// 1️⃣ Primitive → string, number, boolean, null, undefined, symbol, bigint
+// 2️⃣ Reference → array, object, function
+
+// ✅ Primitive
+let a = 12;          // number
+let b = "Harsh";     // string
+let c = true;        // boolean
+let d = null;        // null
+let e;               // undefined
+let f = 123n;        // bigint
+let g = Symbol("uid"); // symbol
+
+// ✅ Reference
+let arr = [1, 2, 3]; // array
+let obj = { name: "Harsh" }; // object
+function greet() { return "Hello"; } // function
+
+console.log(typeof a, typeof b, typeof c, typeof d, typeof e, typeof f, typeof g);
+console.log(typeof arr, typeof obj, typeof greet);
+
+// 🧾 OUTPUT:
+// number string boolean object undefined bigint symbol
+// object object function
+// ======================================================
+
+
+// ======================================================
+// 🔹 TOPIC 5: Dynamic Typing
+// ======================================================
+//
+// JS is dynamically typed — you can change variable types at runtime.
+
+let dyn = 12;
+dyn = true;
+dyn = "Harsh";
+dyn = [];
+dyn = null;
+dyn = undefined;
+
+console.log(typeof dyn);
+// 🧾 OUTPUT: undefined
+//
+// JS doesn’t bind variable to a type permanently.
+
+
+// ======================================================
+// 🔹 TOPIC 6: typeof Quirks
+// ======================================================
+console.log(typeof null); // ❗ object (bug in JS)
+console.log(typeof NaN);  // number
+console.log(NaN === NaN); // false
+console.log(0.1 + 0.2);   // 0.30000000000000004 (floating precision)
+console.log(1 + "1");     // '11'
+console.log(1 == "1");    // true  (type coercion)
+console.log(1 === "1");   // false (strict check)
+
+// 🧾 OUTPUT explained:
+// typeof null → old JS bug, returns "object"
+// typeof NaN → number, even though it's “Not a Number”
+// NaN === NaN → false, because NaN never equals itself
+// ======================================================
+
+
+// ======================================================
+// 🔹 TOPIC 7: Type Coercion (== vs ===)
+// ======================================================
+//
+// ==  → compares values after type conversion
+// === → compares value + type (no conversion)
+
+console.log("5" + 1); // '51'  → + acts as concatenation
+console.log("5" - 1); // 4     → - converts string to number
+
+// 🧾 OUTPUT:
+// '51'
+// 4
+// ======================================================
+
+
+// ======================================================
+// 🔹 TOPIC 8: Truthy vs Falsy Values
+// ======================================================
+//
+// falsy values → false, 0, "", null, undefined, NaN, document.all
+// everything else → truthy
+
+console.log(Boolean(0));         // false
+console.log(Boolean(" "));       // true
+console.log(Boolean(undefined)); // false
+console.log(Boolean([]));        // true
+
+// 🧠 PRACTICE:
+console.log(true + false); // 1
+console.log(null + 1);     // 1
+console.log(5 + "5");      // '55'
+console.log(!!undefined);  // false
+
+// 🧾 OUTPUT:
+// 1
+// 1
+// '55'
+// false
+//
+// EXPLANATION: !! converts value to boolean (double NOT operator).
+// ======================================================
+
+
+// ======================================================
+// 🔹 TOPIC 9: Strings and Methods
+// ======================================================
+//
+// - Strings can be '', "", or ``
+// - Template literals (``) allow expressions inside ${}
+// - Common methods: slice, split, replace, replaceAll, includes
+
+console.log("harsh bhai kaise ho".slice(6, 10)); // 'bhai'
+console.log("harsh sharma".split(" "));          // ['harsh', 'sharma']
+console.log("hello kaise ho".split("h"));        // ['', 'ello kaise ', 'o']
+console.log("harsh bhai".replace("h", "g"));     // 'garsh bhai'
+console.log("huihuihui".includes("h"));          // true
+console.log("huihuihui".includes("u"));          // true
+console.log("huihuihui".includes("k"));          // false
+
+// 🧾 OUTPUT:
+// bhai
+// ['harsh', 'sharma']
+// ['', 'ello kaise ', 'o']
+// garsh bhai
+// true
+// true
+// false
+// ======================================================
+
+
+// ======================================================
+// 🔹 TOPIC 10: Template Literals
+// ======================================================
+console.log(`Harsh ${2 + 2}`);        // Harsh 4
+console.log(`I am ${12 / 4}`);        // I am 3
+console.log(`Hey ${"Prashant"}`);     // Hey Prashant
+// ======================================================
+
+
+// ======================================================
+// 🔹 TOPIC 11: Console Methods
+// ======================================================
+//
+// console.log()   → normal message
+// console.info()  → info message (ℹ️ icon in some browsers)
+// console.warn()  → warning (⚠️)
+// console.error() → error (❌)
+// console.table() → table view of objects/arrays
+
+console.log("hello");
+console.info("hi");
+console.warn("this is a warning");
+console.error("this is an error");
+console.table({ name: "Harsh", age: 22 });
+
+// 🧾 OUTPUT:
+// hello
+// hi (ℹ️ info)
+// ⚠️ warning
+// ❌ error
+// ┌─────────┬───────┐
+// │ (index) │ Value │
+// ├─────────┼───────┤
+// │  name   │ Harsh │
+// │  age    │ 22    │
+// └─────────┴───────┘
+// ======================================================
+
+
+// ======================================================
+// 🔹 TOPIC 12: prompt() and alert() (Browser only)
+// ======================================================
+/*
+prompt("name?");
+let nm = prompt("name?");
+console.log(nm);
+alert("hello " + nm);
+*/
+// 🧾 OUTPUT (if user types "Harsh"):
+// Console → "Harsh"
+// Alert → "hello Harsh"
+// ======================================================
+
+
+// ======================================================
+// 🔹 TOPIC 13: Statements vs Expressions
+// ======================================================
+//
+// A statement performs an action (e.g., variable declaration)
+// An expression produces a value.
+
+let num = 12; // statement
+num + 5;      // expression → gives 17 but doesn’t store
+
+🧠 PRACTICE:
+let x1 = 5;
+let result = x1 * 2; // expression
+console.log(result); // 🧾 OUTPUT: 10
+// ======================================================
+
+// ======================================================
+// 🧾 BONUS: var vs let vs const — QUICK REVISION TABLE
+// ======================================================
+//
+// ┌───────────────┬───────────────┬───────────────┬───────────────┐
+// │ Feature        │     var       │      let      │     const     │
+// ├───────────────┼───────────────┼───────────────┼───────────────┤
+// │ Scope          │ Function      │ Block         │ Block         │
+// │                │ scoped        │ scoped        │ scoped        │
+// ├───────────────┼───────────────┼───────────────┼───────────────┤
+// │ Hoisting       │ ✅ Hoisted &   │ ✅ Hoisted but │ ✅ Hoisted but │
+// │                │ initialized   │ not initialized│ not initialized│
+// │                │ with undefined│ (TDZ applies)  │ (TDZ applies)  │
+// ├───────────────┼───────────────┼───────────────┼───────────────┤
+// │ Redeclaration  │ ✅ Allowed     │ ❌ Not allowed │ ❌ Not allowed │
+// ├───────────────┼───────────────┼───────────────┼───────────────┤
+// │ Reassignment   │ ✅ Allowed     │ ✅ Allowed     │ ❌ Not allowed │
+// ├───────────────┼───────────────┼───────────────┼───────────────┤
+// │ Temporal       │ ❌ No TDZ      │ ✅ TDZ present │ ✅ TDZ present │
+// │ Dead Zone (TDZ)│               │ (error before  │ (error before  │
+// │                │               │ initialization)│ initialization)│
+// ├───────────────┼───────────────┼───────────────┼───────────────┤
+// │ Example Hoist  │ console.log(a)│ console.log(b)│ console.log(c)│
+// │                │ var a = 10;   │ let b = 10;   │ const c = 10; │
+// │ Result         │ undefined     │ ❌ ReferenceErr│ ❌ ReferenceErr│
+// └───────────────┴───────────────┴───────────────┴───────────────┘
+//
+// 💡 TIP:
+// TDZ (Temporal Dead Zone) = time between variable declaration and initialization.
+// During TDZ, you cannot access the variable — doing so throws an error.
+//
+// Example:
+console.log(a); // ❌ ReferenceError
+let a = 12;
+
+// 🧾 Behind the scenes:
+// JS engine breaks code as:
+// let a;        // declared but not initialized (in TDZ)
+// console.log(a); // ❌ Cannot access 'a' before initialization
+// a = 12;       // initialization done here
+// ======================================================
+
+// ✅ END OF DAY 2 + BONUS SUMMARY
+// ======================================================
