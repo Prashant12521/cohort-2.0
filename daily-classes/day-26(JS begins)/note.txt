@@ -1,0 +1,275 @@
+// ======================================================
+// 🟩 JAVASCRIPT DEVELOPER NOTEBOOK: DAY 1 (Single Page, Full Notes + Practice + Hoisting+TDZ)
+// ======================================================
+
+// ======================================================
+// 🔹 TOPIC 1: Introduction to JavaScript
+// ======================================================
+//
+// JS = High-level, interpreted, dynamic scripting language.
+// - Makes websites interactive
+// - Converts human-readable code to machine code via Interpreter/Compiler
+// - Runs in browsers and servers (Node.js)
+// - Not the same as Java
+//
+// Concept: Human → JS → Interpreter → Machine
+// Machine only understands binary (0s and 1s)
+
+🧠 PRACTICE:
+console.log("Hello JavaScript 👋");
+console.log("I’m learning JS step by step!");
+// 🧾 OUTPUT:
+// Hello JavaScript 👋
+// I’m learning JS step by step
+// ======================================================
+
+// ======================================================
+// 🔹 TOPIC 2: Why We Need JS
+// ======================================================
+//
+// HTML → Structure (skeleton of website)
+// CSS → Styling (looks & design)
+// JS → Functionality (interactions & logic)
+//
+// JS is used for:
+// - Animations
+// - Form validation
+// - Click & hover effects
+// - Dynamic content updates
+// - API calls
+
+🧠 PRACTICE:
+console.log("HTML + CSS + JS = Complete Website");
+// 🧾 OUTPUT:
+// HTML + CSS + JS = Complete Website
+// ======================================================
+
+// ======================================================
+// 🔹 TOPIC 3: History of JS
+// ======================================================
+//
+// - Created by Brendan Eich (1995, Netscape)
+// - Built in ~10 days → early versions had bugs
+// - ECMAScript versions fixed issues
+// - Major update: ES6 (2015)
+//   Features: let, const, arrow functions, classes, template literals, promises
+// - JS became modern and widely used after ES6
+
+🧠 PRACTICE:
+console.log("Created by Brendan Eich 🚀");
+console.log("Major upgrade in 2015 → ES6");
+// 🧾 OUTPUT:
+// Created by Brendan Eich 🚀
+// Major upgrade in 2015 → ES6
+// ======================================================
+
+// ======================================================
+// 🔹 TOPIC 4: Where JS Runs
+// ======================================================
+console.log("Running JS in Browser Console");
+// 🧾 OUTPUT:
+// Running JS in Browser Console
+// ======================================================
+
+// ======================================================
+// 🔹 TOPIC 5: Linking JS File
+// ======================================================
+console.log("JS linked successfully!");
+// 🧾 OUTPUT:
+// JS linked successfully!
+// ======================================================
+
+// ======================================================
+// 🔹 TOPIC 6: var
+// ======================================================
+var x = 10;
+var x = 20;   // ✅ Allowed
+x = 30;       // ✅ Allowed
+console.log("var example:", x);
+// 🧾 OUTPUT:
+// var example: 30
+// ======================================================
+
+// ======================================================
+// 🔹 TOPIC 7: let
+// ======================================================
+let y = 10;
+// let y = 20; // ❌ Redeclaration error
+y = 25;       // ✅ Allowed
+console.log("let example:", y);
+// 🧾 OUTPUT:
+// let example: 25
+// ======================================================
+
+// ======================================================
+// 🔹 TOPIC 8: const
+// ======================================================
+const z = 50;
+// z = 60; // ❌ Error
+console.log("const example:", z);
+// 🧾 OUTPUT:
+// const example: 50
+// ======================================================
+
+// ======================================================
+// 🔹 TOPIC 9: Scope
+// ======================================================
+{
+  let a = 5;
+  var b = 10;
+}
+// console.log(a); // ❌ Error
+console.log(b);   // ✅ Works
+// 🧾 OUTPUT:
+// 10
+// ======================================================
+
+// ======================================================
+// 🔹 TOPIC 10: Temporal Dead Zone (TDZ)
+// ======================================================
+//
+// - TDZ = "temporal dead zone" 
+// - Variables declared with let/const exist in memory but are **inaccessible** before initialization
+// - Accessing them before initialization throws ReferenceError
+// - var does not have TDZ, it is initialized as undefined
+
+🧠 PRACTICE:
+let num = 5;
+console.log("TDZ cleared:", num);
+// 🧾 OUTPUT:
+// TDZ cleared: 5
+
+// 🧠 PRACTICE EXAMPLE WITH ERROR:
+console.log(a);
+let a = 12; // ❌ ReferenceError: Cannot access 'a' before initialization
+// Explanation:
+// - JS engine knows 'a' exists (hoisted), but it is in TDZ
+// - console.log(a) is executed **before initialization**, so it breaks
+// - For var, behavior is different: hoisted and initialized as undefined
+// ======================================================
+
+// ======================================================
+// 🔹 TOPIC 11: Hoisting
+// ======================================================
+//
+// Hoisting = JS moves **declarations** to top of their scope before execution
+// - var → hoisted + initialized as undefined
+// - let/const → hoisted, but in TDZ (cannot access yet)
+// - Initialization stays in original line
+//
+// Examples:
+// var hoistVar;
+// let hoistLet; (in TDZ until initialized)
+
+🧠 PRACTICE:
+console.log(age); // undefined (var hoisting)
+var age = 18;
+// 🧾 OUTPUT:
+// undefined
+// ======================================================
+
+// ======================================================
+// 🔹 TOPIC 12: Console Methods
+// ======================================================
+console.log("Normal log ✅");
+console.warn("Warning ⚠️");
+console.error("Error ❌");
+console.table({ name: "Harsh", age: 22 });
+// 🧾 OUTPUT:
+// Normal log ✅
+// ⚠️ Warning
+// ❌ Error
+// ┌─────────┬────────┐
+// │ (index) │ Values │
+// ├─────────┼────────┤
+// │  name   │ 'Harsh'│
+// │  age    │   22   │
+// └─────────┴────────┘
+// ======================================================
+
+// ======================================================
+// 🔹 TOPIC 13: Alert & Prompt (Browser Only)
+// ======================================================
+//
+// alert("msg") → popup message
+// prompt("question") → input box
+// confirm("question") → yes/no popup
+
+🧠 PRACTICE (Browser only):
+// let user = prompt("Enter your name:");
+// alert(`Welcome ${user}! 👋`);
+// console.log("User entered:", user);
+// 🧾 OUTPUT (example name = Harsh):
+// Alert → "Welcome Harsh! 👋"
+// Console → "User entered: Harsh"
+// ======================================================
+
+// ======================================================
+// 🔹 TOPIC 14: Strings
+// ======================================================
+let text = "Harsh Bhai Kaise Ho";
+console.log(text.slice(6, 10));
+console.log(text.split(" "));
+console.log(text.toUpperCase());
+console.log(text.toLowerCase());
+console.log(text.includes("Bhai"));
+console.log(text.replace("Harsh", "Prashant"));
+// 🧾 OUTPUT:
+// Bhai
+// [ 'Harsh', 'Bhai', 'Kaise', 'Ho' ]
+// HARSH BHAI KAISE HO
+// harsh bhai kaise ho
+// true
+// Prashant Bhai Kaise Ho
+// ======================================================
+
+// ======================================================
+// 🔹 TOPIC 15: Template Literals
+// ======================================================
+let name = "Harsh";
+let course = "JavaScript";
+console.log(`Hello ${name}, welcome to ${course} class!`);
+console.log(`This is line 1
+and this is line 2`);
+// 🧾 OUTPUT:
+// Hello Harsh, welcome to JavaScript class!
+// This is line 1
+// and this is line 2
+// ======================================================
+
+// ======================================================
+// 🔹 TOPIC 16: typeof Operator
+// ======================================================
+console.log(typeof 10);
+console.log(typeof "Harsh");
+console.log(typeof true);
+console.log(typeof null);
+console.log(typeof undefined);
+console.log(typeof 123n);
+// 🧾 OUTPUT:
+// number
+// string
+// boolean
+// object
+// undefined
+// bigint
+// ======================================================
+
+// ======================================================
+// 🔹 TOPIC 17: Practice Challenge 💪
+// ======================================================
+//
+// 1. Take name via prompt
+// 2. Alert → "Hello <name>!"
+// 3. Console → "Welcome to JS Practice"
+
+🧠 PRACTICE (Browser only):
+// let username = prompt("Enter your name:");
+// alert(`Hello ${username}! 👋`);
+// console.log("Welcome to JS Practice");
+// 🧾 OUTPUT (example = Prashant):
+// Alert → "Hello Prashant! 👋"
+// Console → "Welcome to JS Practice"
+// ======================================================
+
+// ✅ END OF DAY 1 (Single Page, Full Notes + Practice + Hoisting+TDZ)
