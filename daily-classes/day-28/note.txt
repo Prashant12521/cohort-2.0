@@ -1,0 +1,60 @@
+Day 28 — JavaScript Continue 🚀
+
+Add Comments in JS
+
+Comments are the lines of information that JavaScript ignores while executing code.
+
+Example:
+// harsh - comment example
+
+Data Types in JavaScript
+
+Data ka type hi datatype kehlata hai.
+
+Basic Data Types:
+“harsh”  → String
+12        → Number
+false, true → Boolean
+12.3      → Float
+null      → Null (jab aapke paas koi value dene ke liye na ho)
+undefined → Undefined (jab variable banaya par value nahi di)
+
+Example:
+var a;   // undefined
+
+NaN → Not a Number (jab number ke sath invalid operation ho)
+let result = 12 * "harsh";   // NaN
+
+Infinity → (e.g., 1 / 0)
+
+Complex Data Types:
+
+Array → Ek se zyada values hold karne ke liye
+Example:
+let array = [1, 2, “harsh”, true, null];
+
+Object → Ek entity ke multiple properties store karne ke liye
+Example:
+let object = {
+name: “iPhone”,
+version: “17 Pro”,
+price: 192923,
+boughtOn: “20 Oct”
+};
+
+Reference vs Primitive Data Types
+
+Type: Reference
+Examples: (), {}, [] (functions, objects, arrays)
+Copy Behavior: Reference value cannot be copied directly
+
+Type: Primitive
+Examples: number, boolean, string, null, undefined, NaN, Infinity, Symbol, BigInt
+Copy Behavior: Value can be copied directly
+
+Key Takeaways
+	•	Comments are ignored by JavaScript — use them to explain your code.
+	•	Data types define what kind of value a variable holds.
+	•	Primitive types are copied by value; reference types are copied by reference.
+	•	Use null when no value exists, and undefined when a variable is declared but uninitialized.
+	•	Arrays and objects are used to hold multiple values or properties together.
