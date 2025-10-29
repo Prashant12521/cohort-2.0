@@ -1,0 +1,415 @@
+// ======================================================
+// 🔹 TOPIC 3: OPERATORS in JavaScript
+// ======================================================
+
+// Operators help JS perform logic, comparison, and calculations.
+
+// 🧩 TYPES OF OPERATORS
+// ------------------------------------------------------
+// ➤ Arithmetic
+// ➤ Comparison
+// ➤ Logical
+// ➤ Assignment
+// ➤ Unary
+// ➤ Ternary
+
+
+// ======================================================
+// 🔸 ARITHMETIC OPERATORS (+, -, *, /, %, **)
+// ======================================================
+
+1 + 2           // 3
+'ha' + 'rsh'    // 'harsh'  → concatenation
+12 - 2          // 10
+12 / 6          // 2
+12 * 2          // 24
+12 % 5          // 2   → remainder
+2 ** 3          // 8   → 2³ = 8
+
+
+// ======================================================
+// 🔸 COMPARISON OPERATORS (==, ===, !=, !==, <, >, <=, >=)
+// ======================================================
+
+// "=" → Assignment (used to give value)
+let a = 12; // assignment operator
+
+12 == 13       // false
+12 == '12'     // true  → checks only value (not type)
+12 === '12'    // false → checks value + type (strict)
+12 != 13       // true
+12 != '12'     // false → checks only value
+12 !== '12'    // true  → checks value + type
+
+12 > 15        // false
+12 < 15        // true
+22 < 22        // false
+22 <= 22       // true
+
+// Summary:
+// == and != → loose comparison (only value)
+// === and !== → strict comparison (value + type)
+
+
+// ======================================================
+// 🔸 ASSIGNMENT OPERATORS (=, +=, -=, *=, /=, %=)
+// ======================================================
+let x = 12;
+x += 3;   // x = 15
+x -= 11;  // x = 4
+x *= 2;   // x = 8
+x /= 2;   // x = 4
+x %= 3;   // x = 1
+
+
+// ======================================================
+// 🔸 LOGICAL OPERATORS (&&, ||, !)
+// ======================================================
+//
+// && → AND → both sides must be true
+// || → OR  → at least one side true
+// !  → NOT → reverses truthiness
+
+true && true      // true
+false && true     // false
+12 > 13 && 13 > 10 // false
+
+12 > 13 || 13 > 10 // true
+false || true      // true
+
+!false             // true
+!12                // false (12 → truthy → negated → false)
+!!12               // true  (double negation → truthy)
+
+
+// ======================================================
+// 🔸 UNARY OPERATORS (+, -, !, typeof, ++, --)
+// ======================================================
+
++'15'          // 15
++'harsh'       // NaN
+-5             // -5
+!12            // false
+
+typeof 12           // 'number'
+typeof '12'         // 'string'
+typeof []           // 'object'
+typeof function(){} // 'function'
+
+let a1 = 12;
+++a1;               // 13  (pre-increment)
+a1++;               // 13 (shows 13, then becomes 14)
+
+let b1 = 15;
+b1++;               // 15 (now 16)
+++b1;               // 17
+
+let c1 = 2;
+c1++ + c1;          // 2 + 3 = 5
+
+let d1 = 3;
+--d1;               // 2
+d1--;               // 2 (now becomes 1)
+
+
+// ======================================================
+// 🔸 TERNARY OPERATOR ( ? : )
+// ======================================================
+// Syntax: condition ? trueExpression : falseExpression
+
+12 > 13 ? console.log(true) : console.log(false);
+// Output: false
+
+
+// ======================================================
+// 🔸 typeof vs instanceof
+// ======================================================
+
+typeof 12               // 'number'
+typeof null             // 'object'
+typeof []               // 'object'
+typeof {}               // 'object'
+typeof function(){}     // 'function'
+typeof NaN              // 'number'
+
+// ❌ typeof [] and typeof null → 'object' (incorrect categorization)
+
+let arr = [];
+arr instanceof Array    // true
+let obj = {};
+obj instanceof Object   // true
+obj instanceof Array    // false
+
+// instanceof → used for reference types ([], {}, functions)
+// typeof → used for primitive types (number, string, boolean, etc.)
+
+
+// ======================================================
+// 🔹 COMMON OPERATOR QUESTIONS
+// ======================================================
+
+let x1 = 10, y1 = 20;
+if (x1 > 5 && y1 < 25) console.log("A");
+else console.log("B");
+// ✅ A
+
+let isAdmin = true;
+let isLoggedIn = false;
+if (isAdmin || isLoggedIn) console.log("Access granted");
+else console.log("Access denied");
+// ✅ Access granted
+
+let temp = 35;
+if (!(temp < 30)) console.log("Hot");
+else console.log("Pleasant");
+// ✅ Hot
+
+let a2 = 0;
+if (a2) console.log("Truthy");
+else console.log("Falsy");
+// ✅ Falsy
+
+let score = 78;
+let grade = score >= 90 ? "A" : score >= 75 ? "B" : score >= 60 ? "C" : "Fail";
+console.log(grade); // ✅ B
+
+let points = 120;
+let status = points > 100 ? "Gold" : points > 50 ? "Silver" : "Bronze";
+console.log(status); // ✅ Gold
+
+let loggedIn = true, hasToken = false;
+let access = loggedIn && hasToken ? "Allow" : "Deny";
+console.log(access); // ✅ Deny
+
+
+// ======================================================
+// 🔹 Truthiness with !!
+// ======================================================
+!!""      // false
+!!"hello" // true
+!!0       // false
+!!1       // true
+
+
+// ======================================================
+// 🔹 Pre vs Post Increment
+// ======================================================
+let i = 1;
+console.log(++i); // 2
+console.log(i++); // 2 (but now i = 3)
+
+
+// ======================================================
+// ✅ END OF TOPIC 3
+// ======================================================
+
+
+
+
+// ======================================================
+// 🔹 TOPIC 4: CONTROL FLOW
+// ======================================================
+//
+// Controls how code executes — based on conditions or decisions.
+
+
+// ------------------------------------------------------
+// 🔸 if, else if, else
+// ------------------------------------------------------
+
+if (12 > 10) console.log("true");     // true
+if (115 > 120) console.log("false");  // not executed
+if (15) console.log("truthy");        // truthy
+if (0) console.log("falsy");          // falsy
+if ("harsh") console.log("truthy");   // truthy
+
+if (loggedin && admin) {
+  // both must be true
+} else if (loggedin) {
+  // only logged in
+} else {
+  // none true
+}
+
+
+// ------------------------------------------------------
+// 🔸 switch-case
+// ------------------------------------------------------
+
+switch (3) {
+  case 1:
+    console.log("One");
+    break;
+  case 2:
+    console.log("Two");
+    break;
+  case 3:
+    console.log("Matched");
+    break;
+  default:
+    console.log("Default");
+}
+// ✅ Output: "Matched"
+
+// Missing break example:
+switch (1) {
+  case 1:
+    console.log("Hey");
+  case 2:
+    console.log("Case 2");
+  case 3:
+    console.log("Case 3");
+    break;
+  default:
+    console.log("Default");
+}
+// ✅ Output: Hey, Case 2, Case 3
+// (because no break in case 1)
+
+
+// ------------------------------------------------------
+// 🔸 Early Return Pattern
+// ------------------------------------------------------
+
+function getVal(val) {
+  if (val < 25) return "D";
+  else if (val < 50) return "C";
+  else if (val < 75) return "B";
+  else return "A";
+}
+getVal(48); // "C"
+getVal(21); // "D"
+getVal(76); // "A"
+
+
+// ------------------------------------------------------
+// 🔸 Q: Write function getGrade(score)
+// ------------------------------------------------------
+function getGrade(score) {
+  if (score >= 90 && score <= 100) return "A+";
+  if (score >= 80 && score <= 89) return "A";
+  if (score >= 70 && score <= 79) return "B";
+  if (score >= 60 && score <= 69) return "C";
+  if (score >= 33 && score <= 59) return "D";
+  if (score >= 0 && score <= 32) return "Fail";
+  return "Invalid marks X";
+}
+console.log(getGrade(54)); // D
+
+
+// ------------------------------------------------------
+// 🔸 Rock–Paper–Scissors Logic
+// ------------------------------------------------------
+
+function rps(user, computer) {
+  if (user === computer) return "Draw";
+  if (user === "rock" && computer === "scissor") return "User";
+  if (user === "scissor" && computer === "paper") return "User";
+  if (user === "paper" && computer === "rock") return "User";
+  return "Computer";
+}
+rps("rock", "rock"); // "Draw"
+
+
+// ------------------------------------------------------
+// 🔸 Common Question: Fallthrough in switch
+// ------------------------------------------------------
+let x2 = 2;
+switch (x2) {
+  case 2:
+    console.log("Two");
+  case 3:
+    console.log("Three");
+}
+// Output: Two, Three (because missing break)
+
+
+// ✅ Always use "break" after each case.
+
+
+// ======================================================
+// ✅ END OF TOPIC 4
+// ======================================================
+
+
+
+
+// ======================================================
+// 🔹 TOPIC 5: LOOPS
+// ======================================================
+//
+// Loops = repetition — running code multiple times.
+
+
+// ------------------------------------------------------
+// 🔸 FOR LOOP
+// ------------------------------------------------------
+// Syntax: for (start; condition; change) {}
+
+for (let i = 1; i <= 100; i++) {
+  console.log(i);
+}
+
+// Example: 1 → 40
+for (let i = 1; i <= 40; i++) {
+  console.log(i);
+}
+
+
+// ------------------------------------------------------
+// 🔸 WHILE LOOP
+// ------------------------------------------------------
+let i2 = 1;
+while (i2 < 32) {
+  console.log(i2);
+  i2++;
+}
+
+// Pattern:
+// start
+// while (condition) {
+//   code
+//   change
+// }
+
+
+// ------------------------------------------------------
+// 🔸 DO-WHILE LOOP
+// ------------------------------------------------------
+let j = 1;
+do {
+  console.log(j);
+  j++;
+} while (j <= 5);
+
+
+// ------------------------------------------------------
+// 🔸 LOOP CONTROL — break & continue
+// ------------------------------------------------------
+// break → stops the loop completely
+// continue → skips current iteration and goes to next
+
+
+// ------------------------------------------------------
+// 🔸 FOR-OF and FOR-EACH (for arrays)
+// ------------------------------------------------------
+let arr2 = [1, 2, 3];
+for (let num of arr2) console.log(num); // 1, 2, 3
+
+arr2.forEach((num) => console.log(num)); // same output
+
+
+// ------------------------------------------------------
+// 🔸 FOR-IN and Object.entries() (for objects)
+// ------------------------------------------------------
+let obj2 = { name: "Harsh", age: 20 };
+for (let key in obj2) console.log(key, obj2[key]);
+
+Object.entries(obj2).forEach(([key, value]) => {
+  console.log(key, value);
+});
+
+
+// ======================================================
+// ✅ END OF TOPIC 5 — Operators, Control Flow & Loops
+// ======================================================
