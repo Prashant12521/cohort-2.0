@@ -356,5 +356,123 @@ let a = 12;
 // a = 12;       // initialization done here
 // ======================================================
 
-// ✅ END OF DAY 2 + BONUS SUMMARY
+// ======================================================
+// 🔹 TOPIC 4: Data Types, Type System [Common Confusions]
+// ======================================================
+
+// 🧠 PRACTICE: Predict the Results
+// ------------------------------------------------------
+true + false        // ✅ 1 + 0 → 1
+null + 1            // ✅ 0 + 1 → 1
+5 + '5'             // ✅ '5' + '5' → '55' (string concatenation)
+!!undefined         // ✅ false (double negation makes falsy → false)
+
+// Explanation:
+// ------------------------------------------------------
+// ➤ true → 1
+// ➤ false → 0
+// ➤ null → 0
+// ➤ undefined → NaN (when used in arithmetic)
+// ➤ !!value converts anything to boolean:
+//     !!undefined → false
+//     !!"hello"   → true
+
+
+// ======================================================
+// 💡 WHY "NaN" IS A NUMBER
+// ======================================================
+//
+// typeof NaN === "number" // ✅ true
+//
+// Reason:
+// Whenever a numeric operation fails in JS (like multiplying a number with a string),
+// the result is "NaN" — which stands for "Not-a-Number".
+// But ironically, JS classifies it under the "number" type.
+//
+// Example:
+2 * "harsh"         // ❌ invalid → NaN
+typeof NaN          // ✅ "number"
+
+// Meaning:
+// NaN is not a value itself — it’s an **error indicator** that says:
+// “This was supposed to be a number, but the operation failed.”
+
+
+// ======================================================
+// 💭 undefined vs null
+// ======================================================
+//
+// let x;            // ❌ no value assigned
+// console.log(x);   // ✅ undefined (given automatically by JS)
+//
+// let y = null;     // ✅ null (manually assigned by developer)
+// console.log(y);   // ✅ null
+//
+// 🧩 Explanation:
+// ------------------------------------------------------
+// ➤ undefined → given by JS by default when a variable has no value.
+// ➤ null → assigned manually to show “intentional emptiness.”
+//
+// 🔍 Example Analogy:
+// Before inserting your ATM card → user = null
+// After inserting your card → user = "Prashant"
+//
+// 🧠 Summary:
+// undefined → JS gives automatically
+// null → we assign manually
+
+
+// ======================================================
+// 🔢 TYPE COERCION & OPERATOR BEHAVIOUR
+// ======================================================
+//
+// ➤ "+" operator in JS can do two things:
+//    → Addition (when both sides are numbers)
+//    → Concatenation (when one side is a string)
+//
+// Example:
+'5' + 1             // ✅ '51'  → converts number → string and concatenates
+5 + 1               // ✅ 6     → normal addition
+
+// Explanation:
+// "+" has dual behavior. 
+// When JS sees a string, it prioritizes string concatenation.
+
+
+// ➤ "-" operator only does subtraction.
+// It never concatenates, so it tries to convert strings → numbers.
+//
+'5' - 1             // ✅ 4
+'10' - '2'          // ✅ 8
+
+// 🧩 Why?
+// "-" forces numeric conversion internally.
+//
+// ➤ Dependence on Operator Type:
+//   - "+" → tries to convert to string
+//   - "-" → tries to convert to number
+
+
+// ======================================================
+// 🧾 SUMMARY CHEAT SHEET
+// ======================================================
+//
+// | Concept             | Explanation / Behavior                                      |
+// |----------------------|-------------------------------------------------------------|
+// | NaN                 | Result of invalid numeric operation                         |
+// | typeof NaN          | "number"                                                    |
+// | undefined           | Given by JS automatically                                   |
+// | null                | Manually assigned “empty” value                             |
+// | '+' operator        | Adds or concatenates depending on data type                 |
+// | '-' operator        | Always performs subtraction (forces number conversion)      |
+// | !!undefined         | false                                                      |
+// | !!'string'          | true                                                       |
+// | true + false        | 1                                                          |
+// | null + 1            | 1                                                          |
+// | 5 + '5'             | '55'                                                       |
+// | '5' - 1             | 4                                                          |
+
+
+// ======================================================
+// ✅ END OF TOPIC 4 — Type System & Confusions Cleared!
 // ======================================================
