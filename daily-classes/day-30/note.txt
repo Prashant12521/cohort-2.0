@@ -1,0 +1,221 @@
+### 1) Arithmetic Operators
+
++ - * */ %* **
+
+12+13 //25
+
+12-13 //-1
+
+12*13 //156
+
+12/13 //0.923…
+
+12%13 //12
+
+4%2 //0
+
+2**3 //8
+
+### 2) Assignment Operators
+
+=  +=  -=  *=  /=  %=
+
+equal = value dene me use
+
+let a = 12;
+
++= value ko particular se badhana
+
+a+=13; //a=25
+
+-=
+
+a-=13; //a=12
+
+*=
+
+a*=2; //a=24
+
+/=
+
+a/=2; //a=12
+
+%=
+
+a%=3; //a=0
+
+### 3) Comparison Operators
+
+== === != !== < > <= >=
+
+== not strict compare - Never use ==
+
+=== strict compare - Always use ===
+
+12 == ’12’ //true
+
+12 === ’12’ //false
+
+!= (not equal)
+
+!= not strict - Never use
+
+!== strict - Always use
+
+12 != ’12’ //false
+
+12 !== ’12’ //true
+
+<, >
+
+12<13 //true
+
+12>13 //false
+
+<=
+
+12<=13 //true
+
+12<=12 //true
+
+>=
+
+12>=13 //false
+
+12>=12 //true
+
+### 4) Logical Operator
+
+&& || !
+
+&&(And) - Both side should be true
+
+true && true = true
+
+true && false = false
+
+false && true = false
+
+false && false = false
+
+username===exist && password===userpassword
+
+if(12>13 && 13>11){
+
+condition is false so it won’t run
+
+}
+
+||(OR) - atleast one side should be true
+
+true || true = true
+
+true || false = true
+
+false || true = true
+
+false || false = false
+
+!(Not) -change true to false and vice versa
+
+!true //false
+
+!false //true
+
+ if(!(12>13)){console.log(‘hey’);} //hey
+
+### 5) Ternary Operator
+
+condition ? doThis(true) : doThat(false)
+
+12>13 ? console.log(‘Yes’) : console.log(‘No’); //No
+
+### 6) Type Checking Operators **(typeof, instanceof)**
+
+typeof 12; //number
+
+instanceof - avatar, vansaj
+
+let array = [];
+
+array instanceof Array; //true
+
+### 7) String Operator
+
+‘harsh’ + ‘sharma’ //’harshsharma’
+
+This is called concatenation
+
+### 8) Spread / Rest Operator
+
+… (very important in modern JS)
+
+Used to actual copy refference value
+
+spread …
+
+let arr = [1,2,3,4,5];
+
+let arr2 = arr; //This is refference copy
+
+let arr3 = […arr]; //This is actual copy using spread
+
+rest …
+
+function abcd(abc,….rest){
+
+}
+
+abcd(1,2,3,4,5,6,7,8);
+
+### 9) Nullish Coalescing Operator
+
+?? (fallback only when null / undefined)
+
+12>13 ?? console.log(‘sorry’); //false
+
+null ?? console.log(‘sorry’); //sorry
+
+use in backend
+
+user ?? console.log
+
+### 10) Optional Chaining
+
+?. (safe access to nested values)
+
+let obj = {};
+
+console*.*log(obj*?.name?.*first);
+
+no error
+
+### Variable & Hoisting in JS
+
+var b = 12;
+
+hoisting ka matlab h ki variable ko banane se pahle bhi use kiya jaa sakta h
+
+console.log(a); //no error
+
+var a = 12;
+
+hoisting me aapka variable toot jata h do hisso me
+
+declaration top of the file jaata h
+
+var a;
+
+initialization wahi rahta h jahan variable tha
+
+a = 12;
+
+ab aapka variable error nahi deta kyonki wo hamesha use hone se pahle exist kar raha tha
+- var variables are **initialized as undefined**.
+- let and const variables are **hoisted but not initialized** — they are placed in something called the **Temporal Dead Zone (TDZ)**.
+
+console.log(l);
+
+let l = 12; //error can’t access before initialisation a.k.a TDZ.
+
+let and const variable ke declare karne k upar ka line  TDZ hota h
