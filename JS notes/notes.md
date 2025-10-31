@@ -1168,3 +1168,185 @@ Object.entries(obj2).forEach(([key, value]) => {
 // ======================================================
 // ✅ END OF TOPIC 5 — Operators, Control Flow & Loops
 // ======================================================
+
+// ------------------------------------------------------
+// Practice Question:------
+// ------------------------------------------------------
+// Q1. Print numbers from 1 to 10 using a for loop.
+// for(let i=0; i<=10; i++){
+//   console.log(i)
+// }
+
+// Q2. Print numbers from 10 to 1 using a while loop.
+// let i = 10;
+// while(i>0){
+//   console.log(i);
+//   i--;
+// }
+
+// Q3. Print even numbers from 1 to 20 using a for loop.
+// for(let i=1; i<21; i++){
+//   if(i%2===0){
+//     console.log(i);
+//   }
+// }
+
+// Q4. Print odd numbers from 1 to 15 using a while loop.
+// let i = 1;
+// while(i<16){
+//   if(i%2==1){
+//     console.log(i);
+//   }
+//   i++;
+// }
+
+// Q5. Print the multiplication table of 5 (i.e., 5 × 1 = 5 .. 5 × 10 = 50)
+// const number = 5;
+// let i = 1;
+// while(i<11){
+//   console.log(`${number} x ${i} = ${number*i}`);
+//   i++;
+// }
+
+// Q6. Find the sum of numbers from 1 to 100 using a loop.
+// let sum = 0;
+// for(let i=1; i<101; i++){
+//   sum += i;
+// }
+// console.log(sum);
+
+// Q7. Print all numbers between 1 to 50 that are divisible by 3.
+// for(let i=1; i<=50; i++){
+//   if(i%3==0){
+//     console.log(i);
+//   }
+// }
+
+// Q8. Ask the user for a number and print whether each number from 1 to that number is even or odd. (e.g., "1 is odd", "2 is even", ...)
+// const num = prompt("Number!");
+// for(let i=1; i<=num; i++){
+//   if(i%2===0){
+//     console.log(`${i} is even`);
+//   } else{
+//     console.log(`${i} is odd`);
+//   }
+// }
+
+// Q9. Count how many numbers between 1 to 100 are divisible by both 3 and 5.
+// let count = 0;
+// for(let i=1; i<=100; i++){
+//   if(i%3===0 && i%5===0){
+//     count++;
+//   }
+// }
+// console.log(count);
+
+// ------------------------------------------------------
+// Break and Continue Question:-----
+// ------------------------------------------------------
+
+// Q1: Stop at First Multiple of 7
+// Write a loop from 1 to 100 that: Prints each number and Stops completely when it finds the first number divisible by 7
+// for(let i =1; i<=100; i++){
+//   console.log(i);
+//   if(i===7){
+//     break;
+//   }
+// }
+
+// Q2: Skip Multiples of: 3
+// Write a loop from 1 to 20 that:
+// Skips numbers divisible by 3
+// Prints all others
+// • Use continue
+// Expected output: 12 4 5 7 8 10 11 ... (no 3, 6, 9, etc.)
+// for(let i=1; i<21; i++){
+//   if(i%3===0){
+//     continue;
+//   }
+//   console.log(i);
+// }
+
+// Q3: Print First 5 Odd Numbers Only
+// Write a loop from 1 to 100 that:
+// • Prints only 5 odd numbers
+// • Then stops the loop
+// • Use both if, continue, and a counter + break
+// Expected output: 13579
+// let count = 0;
+// for(let i=1; i<101; i++){
+//   if(i%2===1){
+//     count++;
+//     console.log(i);
+//   }
+//   if(count === 5){break;}
+// }
+
+====================ME===================ME===================ME==================
+5) Loops - Common Confusion ?
+
+-when to use for and while loop
+
+jab bhi hamare paas start, change and end ka pata ho tab for loop ka use karenge aur jab bhi hame idea ho bas kab rukna h tab ham while loop ka use karenge.
+
+For
+
+jaise 1 to 10 tak count karo, yahan start (1), change(1+) aur end(10) teeno pata h to yahan for loop use karnege
+
+While
+
+tab tak chalo jab tak harsh naa mil jaye, yahan harsh kab milega nahi pata ho sakta h 10 baar me mil jaye ho sakta h 50 baar me mile, hame iska idea h ki jab harsh mil jayega tab rukna h aur yahin while loop use karenge
+====================ME===================ME===================ME==================
+
+====================AI===================AI===================AI==================
+
+5) Loops - Common Confusion? 🤔
+
+🔹 Kab use kare For loop?
+
+Jab hame start, change (increment/decrement) aur end ka exact idea ho.
+Matlab loop kitni baar chalega, yeh pehle se pata ho.
+
+Example:
+👉 “1 se 10 tak count karo”
+Yahan -
+	•	Start = 1
+	•	Change = +1
+	•	End = 10
+
+Teeno clear hai, to yahaan for loop best choice hai.
+
+for(let i = 1; i <= 10; i++) {
+  console.log(i);
+}
+
+
+⸻
+
+🔹 Kab use kare While loop?
+
+Jab hame sirf itna pata ho ki kab rukna hai, par kitni baar chalega yeh clear na ho.
+
+Example:
+👉 “Tab tak chalo jab tak Harsh naa mil jaye”
+Ab Harsh kab milega — 10 baar me ya 50 baar me — pata nahi.
+Bas itna pata hai ki “Harsh mil gaya” to rukna hai.
+To yahaan while loop use karenge.
+
+while(!harshMila) {
+  chalteRaho();
+}
+
+
+⸻
+
+🧠 Key Takeaways:
+	•	For loop: Jab iterations ka count pata ho.
+	•	While loop: Jab sirf stop condition pata ho.
+	•	Dono loops repeat karte hain, par use case alag hota hai.
+
+⸻
+====================AI===================AI===================AI==================
+
+
+04:40 Function Start
