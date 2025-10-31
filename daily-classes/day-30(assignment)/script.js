@@ -110,14 +110,14 @@
 // hello()
 // var hello = function () { console.log("Hi") }
 // Write what happened and why.
-//hello is not a function because it is a variable
+//We got error saying hello is not a function because variable var is fully hoisted and function are inside the var variable.
 
 
 // e. Write one sentence:
 // What gets hoisted?
 // What does not get hoisted fully?
-//var gets hoisted.
-//let and const does not get hoisted because of TDZ.
+//variable and function gets hoisted. Var variable and function are fully hoisted.
+//let, const, function expression don't get fully hoisted because of TDZ.
 
 
 
