@@ -90,6 +90,7 @@
 //   }
 // }
 
+
 // 14. Sum of all odd numbers from 1 to 30
 // Add only odd numbers. Print final sum.
 // let sum = 0;
@@ -99,6 +100,7 @@
 //   }
 // }
 // console.log(sum);
+
 
 // 15. Keep asking number until user enters an even number
 // Use while loop. Stop only if input is even.
@@ -113,31 +115,34 @@
 
 // console.log('even');
 
+
 // 16. Print numbers between two user inputs
 // Input start and end using prompt() → print all between.
-let num1 = prompt('First Number');
-num1 = Number(num1);
+// let num1 = prompt('First Number');
+// num1 = Number(num1);
 
-let num2 = prompt('First Number');
-num2 = Number(num2);
+// let num2 = prompt('First Number');
+// num2 = Number(num2);
 
-if(num1 < num2){
-  while(num1 !== num2-1){
-    num1++;
-    console.log(num1);
-  }
-} else if(num1 > num2){
-  while(num1 !== num2+1){
-    num1--;
-    console.log(num1);
-  }
-} else{
-  console.log('No number between them');
-}
+// if(num1 < num2){
+//   while(num1 !== num2-1){
+//     num1++;
+//     console.log(num1);
+//   }
+// } else if(num1 > num2){
+//   while(num1 !== num2+1){
+//     num1--;
+//     console.log(num1);
+//   }
+// } else{
+//   console.log('No number between them');
+// }
 
 
 // 17. Print only first 3 odd numbers from 1 to 20
 // Use loop. Stop with break after 3 odd prints.
+
+
 
 // 18. Ask user 5 numbers. Count how many are positive
 // Use loop + condition + counter.
