@@ -80,17 +80,61 @@
 // 12. Ask user for words until they type “stop”. Count how many times they typed “yes”
 // Loop until "stop" is typed. Count "yes".
 
+
+
 // 13. Print numbers divisible by 7 from 1 to 50
 // Use modulo % and loop.
+// for(let i=1; i<51; i++){
+//   if(i%7===0){
+//     console.log(i);
+//   }
+// }
 
 // 14. Sum of all odd numbers from 1 to 30
 // Add only odd numbers. Print final sum.
+// let sum = 0;
+// for(let i=1; i<31; i++){
+//   if(i%2===1){
+//     sum=sum+i;
+//   }
+// }
+// console.log(sum);
 
 // 15. Keep asking number until user enters an even number
 // Use while loop. Stop only if input is even.
+// let oddEven;
+
+// let number = prompt('Number');
+
+// while(number%2 !== 0){
+//   console.log('odd');
+//   number = prompt('Number?');
+// }
+
+// console.log('even');
 
 // 16. Print numbers between two user inputs
 // Input start and end using prompt() → print all between.
+let num1 = prompt('First Number');
+num1 = Number(num1);
+
+let num2 = prompt('First Number');
+num2 = Number(num2);
+
+if(num1 < num2){
+  while(num1 !== num2-1){
+    num1++;
+    console.log(num1);
+  }
+} else if(num1 > num2){
+  while(num1 !== num2+1){
+    num1--;
+    console.log(num1);
+  }
+} else{
+  console.log('No number between them');
+}
+
 
 // 17. Print only first 3 odd numbers from 1 to 20
 // Use loop. Stop with break after 3 odd prints.
@@ -102,3 +146,5 @@
 // Start with ₹1000 balance. Ask withdrawal amount 3 times.
 // If enough balance → deduct
 // Else → print “Insufficient balance”
+
+//12
