@@ -80,6 +80,29 @@
 // 12. Ask user for words until they type “stop”. Count how many times they typed “yes”
 // Loop until "stop" is typed. Count "yes".
 
+// let word = function(){
+//   return prompt('Word');
+// }
+
+// let sabdh = word();
+
+// let count = 0;
+
+// while(sabdh !== 'stop'){
+
+//   if(sabdh === null){
+//     console.log('You cancelled it');
+//     break;
+//   }
+
+//   if(sabdh === 'yes'){
+//   count++
+//   }
+
+//   sabdh = word();
+
+// }
+// console.log(`You typed yes ${count} times`);
 
 
 // 13. Print numbers divisible by 7 from 1 to 50
@@ -141,15 +164,64 @@
 
 // 17. Print only first 3 odd numbers from 1 to 20
 // Use loop. Stop with break after 3 odd prints.
+// let count = 0;
 
+// let i = 0;
+
+// while(i<21){
+
+//   if(count >= 3){
+//     break;
+//   } else{
+//       if(i%2 !== 0){
+//       count++;
+//       console.log('odd');
+//       }
+//     }
+//   i++;
+// }
 
 
 // 18. Ask user 5 numbers. Count how many are positive
 // Use loop + condition + counter.
+
+// function num(){
+//   return Number(prompt("number"));
+// }
+
+// let counter = 0;
+
+// for(let i = 1; i < 6; i++){
+//   let check = num();
+//   if(check>0){
+//     console.log(`${check} is +ve`);
+//     counter++;
+//   }
+// }
+
+// console.log(`${counter} number are +ve`);
+
 
 // 19. ATM Simulator – Allow 3 withdrawals
 // Start with ₹1000 balance. Ask withdrawal amount 3 times.
 // If enough balance → deduct
 // Else → print “Insufficient balance”
 
-//12
+// let balance = 1000;
+
+// for(let i = 1; i < 4; i++){
+//   let withdrawal = prompt('Withdrawal Amount');
+
+//   if(withdrawal === null){
+//     console.log('You Cancelled It');
+//     break;
+//   } else{
+//       withdrawal = Number(withdrawal);
+//       if(withdrawal > balance){
+//       console.log('Insufficient balance');
+//     } else{
+//       balance-=withdrawal;
+//       console.log(`Available balance = ${balance}`);
+//     }
+//   }
+// }
