@@ -1,0 +1,246 @@
+# Day-38
+
+**__Pure Function__**
+1. **Same Input → Same Output**
+2. **No Side Effects** (doesn’t modify global variables, DOM, files, etc.)
+
+```
+function abcd(val){
+  console.log(val+2);
+}
+
+abcd(12); //14
+abcd(12); //14
+abcd(12); //14
+```
+
+**__Impure Function__**
+- **Changes something outside its scope**, or
+- **Depends on external data**, or
+- **Gives different outputs for the same input.**
+
+```
+let a = 12;
+function abcd(val){
+  a = Math.random() + val;
+  console.log(a);
+}
+
+abcd(12); //12.5912...
+abcd(12); //12.8343...
+abcd(12); //12.8734...
+```
+
+### Understanding Scoping in JS - [Global Scope, Function Scope]
+
+```
+let a = 12; //global scope
+
+function abc(){
+  let b = 123;
+}
+console.log(b); //RefferenceError
+```
+
+### Understanding Closures, Scoping Rule
+
+**__Closure__**
+
+Ek function jo return kare function and returning function jo h wo parent function ka koi variable use karega
+
+```
+function outer() {
+  let count = 0;
+
+  function inner() {
+    count++;
+    console.log(count);
+  }
+
+  return inner;
+}
+
+const counter = outer(); // outer() runs once, returns inner
+counter(); // 1
+counter(); // 2
+counter(); // 3
+```
+
+**__Scoping Rule__**
+
+**Global Scope**
+
+Variables declared **outside any function or block** are in the **global scope** and can be accessed **anywhere** in the program.
+
+**Function (Local) Scope**
+
+Variables declared **inside a function** are **local** — accessible **only inside that function**.
+
+**Block Scope**
+
+Variables declared using **let** or **const** inside {} are **block-scoped**, meaning they exist only inside that block.
+
+**Lexical Scope**
+
+Lexical scope means **inner functions can access variables of outer functions**, but **outer functions cannot access variables of inner functions**.
+
+```
+function outer() {
+  let outerVar = "outside";
+
+  function inner() {
+    console.log(outerVar); // ✅ accessible
+  }
+
+  inner();
+}
+
+outer();
+```
+
+### What are Arrays in JS and how to create an Array
+
+Ek se jyada members rakhne ki jagah
+
+```
+let arr = [1,2,3,4,5,6];
+console.log(arr[5]); //6
+```
+
+```
+let arr = [];
+let arr2 = new Array();
+```
+
+### Understand How to Accessing Elements in Arrays
+
+```
+let arr = [1,2,3,4,5];
+arr[2]; //3
+```
+
+### Functions on Arrays - [push, pop, shift, unshift, indexOf, array destructuing, filter, some, map, reduce, spread operator, slice, reverse, sort, join, toString]
+
+```
+let arr = [1,2,3,4,5];
+arr.push(6);
+console.log(arr);
+// [1,2,3,4,5,6]
+```
+
+```
+let arr = [1,2,3,4,5];
+arr.pop();
+console.log(arr);
+//[1,2,3,4]
+```
+
+unshift
+
+```
+let arr = [1,2,3,4,5];
+arr.unshift(0);
+console.log(arr);
+//[0,1,2,3,4]
+```
+
+shift
+
+```
+let arr = [1,2,3,4,5];
+arr.shift();
+console.log(arr);
+//[2,3,4]
+```
+
+```
+let arr = [1,2,3,4,5];
+console.log(arr.indexOf(4));
+//3
+```
+
+Array Destructuring
+
+```
+let arr = [1,2,3,4,5];
+let [a,,b] = arr;
+console.log(a,b);
+//1 3
+```
+
+filter
+
+```
+let arr = [1,2,3,4];
+let arr2 = arr.filter(function(val){
+  return val < 3;
+});
+console.log(arr); //[1,2,3,4]
+console.log(arr2); //[1,2]
+```
+
+some, map, reduce — at question
+
+spread operator
+
+```
+let arr = [1,2,3,4];
+let arr2 = [...arr];
+console.log(arr); //[1,2,3,4]
+console.log(arr2); //[1,2,3,4]
+```
+
+slice, reverse, sort, join, toString — at question
+
+### Iterating Over Arrays using - [for loop, forEach]
+
+```
+let arr = [1,2,3,4];
+for (let i = 0; i < arr.length; i++) {
+  //code
+}
+```
+
+```
+let arr = [1,2,3,4];
+arr.forEach(function (val) {
+  console.log(val);
+});
+```
+
+### Understanding What are Objects in JS - [key-value pair]
+
+```
+let obj = {
+  name: ‘harsh’,
+  age: 27,
+  email: ‘harsh@mail.com’,
+};
+
+let obj2 = new Object();
+```
+
+### Creating Objects, Accessing Properties, Deleting Property and Nested Objects
+
+```
+let obj = {
+  name: ‘harsh'
+}
+
+obj.name; //'harsh'
+obj['name’]; //'harsh'
+```
+
+```
+delete obj.name;
+```
+
+```
+let obj = {
+  name: ‘harsh’,
+  socials: {
+    instagram: 'hasdf',
+    facebook: 'dsfsd'
+  }
+}
+```
