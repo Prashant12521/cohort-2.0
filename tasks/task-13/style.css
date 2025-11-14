@@ -1,0 +1,51 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html,
+body {
+  height: 100%;
+  width: 100%;
+  background-color: black;
+}
+
+/* body { outline: 3px solid red; overflow: hidden; } */
+
+h1{
+  padding: 3rem;
+  font-size: 8rem;
+  text-align: center;
+  color: lightgreen;
+}
+
+h2{
+  padding: 2rem;
+  font-size: 4rem;
+  text-align: center;
+  color: lightskyblue;
+}
+
+.btns{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  padding: 5rem 0 8rem;
+}
+
+button{
+  padding: 2rem;
+  border-radius: 18px;
+  border: none;
+  background-color: rgb(81, 97, 102);
+  font-weight: 600;
+  font-size: 1rem;
+  color: aqua;
+}
+
+.reset{
+  width: 100%;
+  font-size: 2rem;
+  color: red;
+}
