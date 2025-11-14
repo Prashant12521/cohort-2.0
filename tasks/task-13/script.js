@@ -5,7 +5,7 @@ let sqr = document.querySelector('#js-sqr');
 let cube = document.querySelector('#js-cube');
 let reset = document.querySelector('#js-reset');
 
-let count = 0;
+let count = 0n;
 
 inc.addEventListener('click', function(){
   count++;
@@ -23,11 +23,11 @@ sqr.addEventListener('click', function(){
 })
 
 cube.addEventListener('click', function(){
-  count = count**3;
+  count = count*count*count;
   start.innerHTML = count;
 })
 
 reset.addEventListener('click', function(){
-  count = 0;
+  count = 0n;
   start.innerHTML = count;
 })
