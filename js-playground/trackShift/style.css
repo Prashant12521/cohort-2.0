@@ -1,0 +1,25 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+
+body{
+  background-color: black;  
+}
+
+#rect {
+  position: absolute;
+  top: 50%;                   /* center vertically */
+  transform: translateY(-50%);
+  width: 200px;
+  height: 200px;
+  background: #ff4545;
+  border-radius: 12px;
+  transition: left 0.2s ease-out;   /* smooth movement */
+}
