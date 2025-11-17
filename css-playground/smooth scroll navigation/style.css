@@ -1,0 +1,27 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+html{
+  scroll-behavior: smooth;
+}
+section{
+  height: 100vh;
+  font-size: 3rem;
+  text-align: center;
+}
+#home{
+  background-color: lightblue;
+}
+#gallery{
+  background-color: lightgreen;
+}
+#checkout{
+  background-color: lightsalmon;
+}
