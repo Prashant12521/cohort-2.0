@@ -1,0 +1,42 @@
+:root{
+  --color: red;
+  --x: 200px;
+  --y: 200px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+
+/* 
+  linearGradient
+  radialGradient 
+*/
+
+/* .box{
+  height: 400px;
+  width: 400px;
+  border: 1px solid white;
+  // background: linear-gradient(to right, red, purple, lightgreen);
+  // background: linear-gradient(in okLab to right, red, purple, lightgreen);
+  // background: linear-gradient(in hsl to right, red, purple, lightgreen);
+  background: radial-gradient(300px at var(--x) var(--y), blue, var(--color) );
+} */
+
+body{
+  background-image: url(https://images.unsplash.com/photo-1763493411066-48cc93cc82db?q=80&w=3132&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+  background-size: cover;
+}
+
+.box{
+  height: 100%;
+  width: 100%;
+  background: radial-gradient(150px at var(--x) var(--y), rgba(255, 255, 255, 0), black);
+}
