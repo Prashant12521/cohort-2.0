@@ -1,0 +1,43 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+
+body{
+  background-color: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.box{
+  height: 250px;
+  width: 250px;
+  background-color: var(--bgColor);
+  animation: animateBgColor 5s infinite forwards alternate;
+}
+
+@property --bgColor {
+  syntax: "<color>";
+  initial-value: red;
+  inherits: false;
+}
+
+@keyframes animateBgColor {
+  from{
+    --bgColor:red;
+    scale: 1;
+    border-radius: 0;
+  }
+  to{
+    --bgColor: blue;
+    scale: 0.7;
+    border-radius: 30px;
+  }
+}
