@@ -1,0 +1,30 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+
+body{
+  background-color: black;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+#box-1{
+  margin-right: auto;
+}
+
+.box{
+  flex-shrink: 0;
+  height: 200px;
+  width: 200px;
+  background-color: darkblue;
+}
