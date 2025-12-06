@@ -117,3 +117,116 @@ console.log(a, b);
 ```
 
 ---
+
+# __3. Operator__
+
+## Operators
+
+- Arithmetic → +,-,*,%,/
+- Relation operator → >,<,>=,<=,≠
+- Logical operator → &&, ||
+- Unary operator → ++, —
+
+### __Arithmetic__ [+, -, *, /, %]
+
+```
+console.log(231%10); // 1
+console.log(231%100); // 31
+console.log(231%1000); // 231
+```
+
+```
+console.log(Math.floor(232/10)); // 23
+```
+
+**In DSA,**
+- **Integer / Integer **should be** Integer**
+- **Integer % Integer **should be **Integer**
+
+### __Relation operator __[>, <, >=, <=, ==, !=]
+
+```
+console.log(10>9); // true
+console.log(10<9); // false
+console.log(13<=22); // true
+console.log('9' == 9); // true
+console.log('9’ === 9); // false
+console.log(9 != 9); // false
+```
+
+### __Logical Operator__ [&&, ||]
+
+```
+console.log(12>3 && 9<12); // true
+console.log(12>3 && 9>12); // false
+console.log(true && true); // true
+console.log(true && false); // false
+console.log(12>3 && 9<12 && 19<10); // false
+```
+
+```
+console.log(12>32 || 9<12 || 19>10); // true
+console.log(!(12>7 || 8>10 || 34<30)); //false
+```
+
+### __Unary Operator__ [++, —]
+
+- Increment (++) → 1. Pre ++, 2. Post ++
+- Decrement (—) → 1. Pre —, 2. Post —
+
+__Post++, Post—__
+
+```
+let a = 10;
+let b = a++;
+console.log(a, b); //11 10
+
+let c = 12;
+let d = c--;
+console.log(c, d); //11 12
+```
+
+**__Pre++, Pre—__**
+
+```
+let a = 10;
+let b = ++a;
+console.log(a, b); //11, 11
+
+let c = 13;
+let d = --c;
+console.log(c, d); //12, 12
+```
+
+```
+let b = 15;
+let c = 20;
+let d = a++ + --b + ++a - c-- + --c
+
+console.log(a, b, c, d);
+// 12 14 18 34
+```
+
+```
+let a = 10++ // error
+
+++(++a) // error
+```
+
+```
+let a = true;
+console.log(a++); // 1
+
+let a = true;
+console.log(++a); // 2
+```
+
+```
+let a = false;
+console.log(a++); // 0
+
+let a = false;
+console.log(++a); // 1
+```
+
+---
