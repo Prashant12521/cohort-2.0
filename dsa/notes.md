@@ -380,3 +380,201 @@ console.log(c.toFixed(2));
 ```
 
 ---
+
+# __5. Conditional Statement__
+
+```
+let age = Number(prompt("Enter your age "));
+
+if(age>=18){
+  console.log('valid voter');  
+} else {
+  console.log('not valid');
+}
+```
+
+```
+let marks = Number(prompt("Enter your marks "));
+
+if(marks>30)console.log('pass');
+if(marks<=30)console.log('fail');
+```
+
+```
+let marks = Number(prompt("Enter your marks "));
+
+if (marks <= 30) {
+  console.log("fail");
+} else if (marks > 30 && marks < 70) {
+  console.log("study more");
+} else if (marks > 70 && marks < 90) {
+  console.log("good");
+} else {
+  console.log("very good");
+}
+```
+
+### Conditional Statements Questions:-
+
+**Q. **Accept two numbers and print the greatest between them
+
+```
+let num1 = prompt("First Number ");
+
+let num2 = prompt("Second Number ");
+
+if (num1 > num2) {
+  console.log(num1+' is greatest number');
+} else {
+  console.log(num2 + ' is the greatest number');
+}
+```
+
+**Q. **Accept an integer and check whether it is an even number or odd
+
+```
+let num = +prompt('Number ');
+if(num%2 === 0){
+  console.log('even');
+}else{
+  console.log('odd');
+}
+```
+
+**Q. **Accept name and age from the user. Check if the user is a valid voter or not.
+
+```
+let name = prompt("Your Name ");
+let age = prompt("Your age ");
+if (age >= 18) {
+  console.log(`${name} is eligible to vote`);
+} else {
+  console.log(`${name} is not eligible to vote`);
+}
+```
+
+**Q. **Accept three numbers and print the greatest among them
+
+```
+let num1 = prompt("1st Number");
+let num2 = prompt("2nd Number");
+let num3 = prompt("3rd Number");
+if (num1 > num2 && num1 > num3) {
+  console.log(num1);
+} else if (num2 > num1 && num2 > num3) {
+  console.log(num2);
+} else {
+  console.log(num3);
+}
+```
+
+**Q. **Accept a year and check if it a leap year or not
+
+```
+let year = Number(prompt("Year "));
+if (year % 4 === 0 && year % 100 !== 0) {
+  console.log(year + " is a leap year");
+} else if (year % 400 === 0) {
+  console.log(year + " is  a leap year");
+} else {
+  console.log(year + " is not a leap year");
+}
+```
+
+**Q. **Shop discount - Description on below
+
+**    Amount**                      **Discount**
+
+   0 - 5000                         0%
+
+5001 - 7000                      5%
+
+7001 - 9000                     10%
+
+     >9000                         20%
+
+```
+let amount = Number(prompt("Total Amount "));
+if (amount < 5001) {
+  console.log("Discount: 0%");
+} else if (amount >= 5001 && amount <= 7000) {
+  console.log("Discount: 5%");
+} else if (amount >= 7001 && amount <= 9000) {
+  console.log("Discount: 10%");
+} else if (amount > 9000) {
+  console.log("Discount: 20%");
+}
+```
+
+**Q.  **Electricity Bill - Description below
+
+**Amount**                      **Discount**
+
+  <=100                             4.2
+
+101 - 200                            6
+
+201 - 400                           8
+
+    >400                              13
+
+```
+let units = prompt("Total Units ");
+
+if (units <= 100) console.log(units * 4.2);
+else if (units >= 101 && units <= 200)
+  console.log(100 * 4.2 + (units - 100) * 6);
+else if (units >= 201 && units <= 400)
+  console.log(100 * 4.2 + 100 * 6 + (units - 200) * 8);
+else if (units > 400)
+  console.log(100 * 4.2 + 100 * 6 + 200 * 8 + (units - 400) * 13);
+```
+
+```
+let units = Number(prompt("Total Units "));
+let amount = 0;
+// units = 700
+if (units > 400) {
+  amount = (units - 400) * 13;
+  units = 400;
+}
+if (units > 200 && units <= 400) {
+  amount += (units - 200) * 8;
+  units = 200;
+}
+if (units > 100 && units <= 200) {
+  amount += (units - 100) * 6;
+  units = 100;
+}
+if (units <= 100) {
+  amount += units * 4.2;
+}
+console.log(amount);
+```
+
+**Q. ** Counting number of days in a given month of a year
+
+```
+const month = Number(prompt("Month Number "));
+let days = 0;
+
+if (month == 2) {
+  const year = Number(prompt("Year "));
+  if (year%400 == 0 || (year % 4 == 0 && year%100 !== 0)) {
+    days = 29;
+  } else days = 28;
+} else if (
+  month == 1 ||
+  month == 3 ||
+  month == 5 ||
+  month == 7 ||
+  month == 8 ||
+  month == 10 ||
+  month == 11
+) {
+  days = 31;
+} else {
+  days = 30;
+}
+console.log(days);
+```
