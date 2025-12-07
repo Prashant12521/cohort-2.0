@@ -508,7 +508,7 @@ if (amount < 5001) {
 
 **Q.  **Electricity Bill - Description below
 
-**Amount**                      **Discount**
+** Amount**                      **Discount**
 
   <=100                             4.2
 
@@ -578,3 +578,154 @@ if (month == 2) {
 }
 console.log(days);
 ```
+
+---
+
+# __6. Switch Case__
+
+```
+let n = 10.9;
+
+switch (n) {
+  case 1.8:
+    console.log("hello");
+    break;
+
+  case 10.9:
+    console.log("world");
+    break;
+}
+```
+
+```
+let day = Number(prompt("Enter day number "));
+
+switch (day) {
+  case 1: {
+    console.log("Monday");
+    break;
+  }
+  case 2: {
+    console.log("Tuesday");
+    break;
+  }
+  case 3: {
+    console.log("Wednesday");
+    break;
+  }
+  case 4: {
+    console.log("Thrusday");
+    break;
+  }
+  case 5: {
+    console.log("Friday");
+    break;
+  }
+  case 6: {
+    console.log("Saturday");
+    break;
+  }
+  case 7: {
+    console.log("Sunday");
+    break;
+  }
+
+  default:
+    console.log("invalid");
+}
+```
+
+```
+let n = Number(prompt('Enter n number '));
+
+switch(n){
+    case 1:
+    case 3: {
+        console.log('hello world');
+        break;
+    }
+    case 2:{
+        console.log('namaste duniya');
+        break;
+    }
+    case 4:{
+        console.log('Thrusday');
+        break;
+    }
+    case 5:{
+        console.log('Friday');
+        break;
+    }
+    case 6:{
+        console.log('Saturday');
+        break;
+    }
+    case 7:{
+        console.log('Sunday');
+        break;
+    }
+
+    default: console.log('invalid');
+    
+}
+```
+
+**Q. **Check Consonant or Vowel using Switch
+
+```
+let s = prompt("Enter a string");
+let consonent = 0,
+  vowel = 0;
+
+for (let i = 0; i < s.length; i++) {
+  let ch = s.charAt(i);
+  switch (ch) {
+    case "a":
+    case "e":
+    case "i":
+    case "o":
+    case "u":
+      vowel++;
+      break;
+
+    default:
+      consonent++;
+  }
+}
+
+console.log("consonent " + consonent);
+console.log("vowel " + vowel);
+```
+
+**Q. **Write a program to calculate the area of a circle, rectange and triange using a switch statement
+
+```
+console.log('Enter 1 for area of rectangle');
+console.log('Enter 2 for area of square');
+console.log('Enter 3 for area of triangle');
+
+let n = Number(prompt());
+
+switch(n){
+    case 1:{
+        let length = Number(prompt('Enter length '));
+        let breadth = Number(prompt('Enter breadth '));
+        console.log(length*breadth);
+        break;
+    }
+    case 2:{
+        let side = Number(prompt('Enter side'));
+        console.log(side*side);
+        break;
+    }
+    case 3:{
+        let height = Number(prompt('Enter height'));
+        let base = Number(prompt('Enter base'));
+        console.log((height*base)/2);
+        break;
+    }
+    default: console.log('invalid');
+}
+```
+
+---
