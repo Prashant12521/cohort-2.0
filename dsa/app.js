@@ -52,4 +52,3 @@ let prompt = require("prompt-sync")();
 // }
 // console.log(days);
 
-
