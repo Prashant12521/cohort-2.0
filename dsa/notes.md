@@ -1,10 +1,10 @@
 # DSA
 
-# __1. DSA Intro__
+# 1. DSA Intro
 
 ---
 
-# __2. JS Essentials__
+# 2. JS Essentials
 
 ## Variable
 
@@ -118,7 +118,7 @@ console.log(a, b);
 
 ---
 
-# __3. Operator__
+# 3. Operator
 
 ## Operators
 
@@ -231,7 +231,7 @@ console.log(++a); // 1
 
 ---
 
-# __4. Math Function__
+# 4. Math Function
 
 ## Math functions and Problems:
 
@@ -381,7 +381,7 @@ console.log(c.toFixed(2));
 
 ---
 
-# __5. Conditional Statement__
+# 5. Conditional Statement
 
 ```
 let age = Number(prompt("Enter your age "));
@@ -581,7 +581,7 @@ console.log(days);
 
 ---
 
-# __6. Switch Case__
+# 6. Switch Case
 
 ```
 let n = 10.9;
@@ -729,3 +729,96 @@ switch(n){
 ```
 
 ---
+
+# 7. Introduction to Loop
+
+Loop is a programming structure which perform repeted task with certain condition
+
+```
+console.log("hello");
+console.log("hello");
+console.log("hello");
+console.log("hello");
+console.log("hello");
+```
+
+## Types of Loops (Based on Control)
+
+1. **Entry Control Loop**
+- Condition is checked befor entering the loop body
+- If the condition is **false initially, **the loop will not execute even once
+- Used when the number of iterations is uncertain or conditional
+
+**__Examples__:- for loop **and** while loop**
+
+```
+// Entry control loop example (while)
+let i = 1;
+
+while (i <= 3) {
+  console.log(i);
+  i++;
+}
+
+// 1
+// 2
+// 3
+```
+
+### __For Loop__
+
+```
+for(ini/dec; condition; change){
+  // code
+}
+```
+
+```
+let n = prompt(’Number');
+
+for(let i = 1; i<=n; i++){
+  console.log(‘hello world’);
+}
+```
+
+### __Infinite Loop__
+
+```
+let n = prompt(’Number');
+
+for(let i = 1; i<=n;){
+  console.log(‘hello world’);
+}
+```
+
+```
+let n = prompt(’Number');
+
+for(let i = 1; i<=n;;){
+  console.log(‘hello world’);
+}
+```
+
+```
+let n = prompt(’Number');
+
+for(;;){
+  console.log(‘hello world’);
+}
+```
+
+1. **Exit Control Loop**
+- Condition is checked after executing the loop body
+- The loop **executes at least once**, even if the condition is **false**
+- Useful when the task must run **once befor checking condition**
+
+**__Example__:- do…while loop**
+
+```
+let i = 5;
+
+do {
+  console.log(i);
+  i++;
+} while (i <= 3);
+```
