@@ -17,13 +17,17 @@ wallpaper.addEventListener("click", function (val) {
 const close = document.querySelector("#close");
 const browser = document.querySelector("#js-chrome");
 
+const appMenu = document.querySelector("#app-menu");
+
 close.addEventListener("click", function () {
   browser.style.display = "none";
+  appMenu.innerHTML = "Finder";
 });
 
-const browserDock = document.querySelector('#chrome-dock');
+const browserDock = document.querySelector("#chrome-dock");
 
-browserDock.addEventListener('click', function(e){
+browserDock.addEventListener("click", function (e) {
   e.stopPropagation();
   browser.style.display = "block";
-})
+  appMenu.innerHTML = "Chrome";
+});
