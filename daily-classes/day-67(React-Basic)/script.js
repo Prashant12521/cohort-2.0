@@ -1,6 +1,5 @@
-import box from "./app.js";
-import box2 from "./app2.js";
+import parent from './parent.js';
 
 const root = ReactDOM.createRoot(document.querySelector("#container"));
 
-root.render([box(), box2()]);
+root.render(parent());

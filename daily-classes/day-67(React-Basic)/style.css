@@ -15,3 +15,8 @@ body {
   background-color: red;
   margin: 10px;
 }
+
+#parent {
+  background-color: lightgreen;
+  display: flex;
+}
