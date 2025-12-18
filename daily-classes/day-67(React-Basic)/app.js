@@ -1,10 +1,3 @@
-const name = "kira";
+const box = () => React.createElement("div", { id: "box" }, "This is box");
 
-export default name;
-
-export const age = 23;
-
-export function user () {
-  console.log('Nick');
-  return 32
-}
+export default box;
