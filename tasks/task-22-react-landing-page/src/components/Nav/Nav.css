@@ -1,0 +1,40 @@
+.nav{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  h3{
+    font-size: 1.7rem;
+    font-weight: 500;
+  }
+
+  ul{
+    display: flex;
+    align-items: center;
+    gap: 5rem;
+
+    li{
+      font-size: 1rem;
+      font-weight: 300;
+    
+      &:nth-child(1){
+        padding: .4rem .7rem;
+        border-radius: 1rem;
+        border: 1px solid rgba(128, 128, 128, 0.576);
+      }
+    }
+  }
+
+  button{
+    padding: .6rem .9rem;
+    background-color: var(--btn-color);
+    color: #fff;
+    border-radius: 2rem;
+    font-size: 1.2rem;
+    font-weight: 300;
+
+    i{
+      margin-left: .3rem;
+    }
+  }
+}

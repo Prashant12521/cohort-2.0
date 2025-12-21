@@ -1,0 +1,133 @@
+.services{
+  width: 100%;
+  height: 500px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  .box{
+    height: 80%;
+    width: 32%;
+    border-radius: 2.5rem;
+  }
+
+  .firstt{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: flex-start;
+
+    label{
+      padding: 7px 14px;
+      border: 1px solid rgba(117, 111, 111, 0.661);
+      border-radius: 2rem;
+      font-size: 1rem;
+    }
+
+    h3{
+      font-size: 1.4rem;
+      font-weight: 500;
+      line-height: 1.3;
+    }
+
+    button{
+    padding: .6rem .9rem;
+    background-color: var(--btn-color);
+    color: #fff;
+    border-radius: 2rem;
+    font-size: 1.2rem;
+    font-weight: 300;
+
+    i{
+      margin-left: .3rem;
+    }
+  }
+  }
+
+  .second{
+    padding: 1.8rem;
+    background-image: url(../../assets/img/play.png);
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    color: #fff;
+
+    .program{
+      padding: .7rem 1rem;
+      background: rgba(255, 255, 255, 0.275);
+      backdrop-filter: blur(10px);
+      border-radius: 2rem;
+      border: 1px solid rgb(205, 202, 202);
+      font-size: 1rem;
+    }
+
+    .bottom{
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      h5{
+        font-size: 1.5rem;
+        font-weight: 500;
+      }
+
+      i{
+        font-size: 2rem;
+      }
+    }
+  }
+
+  .thirdd{
+    .top{
+      height: 60%;
+      background-image: url(../../assets/img/ball.png);
+      background-size: cover;
+      background-position: center;
+      border-radius: 2rem;
+      padding: 1.8rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: flex-start;
+      color: #fff;
+
+      h6{
+        padding: .7rem 1rem;
+        background: rgba(255, 255, 255, 0.275);
+        backdrop-filter: blur(10px);
+        border-radius: 2rem;
+        border: 1px solid rgb(205, 202, 202);
+        font-size: 1rem;
+      }
+
+      h5{
+        font-size: 1rem;
+        font-weight: 500;
+      }
+    }
+
+    .bottom{
+      padding-top: 15px;
+
+      h6{
+        font-size: 1.3rem;
+        font-weight: 500;
+      }
+
+      .arrow{
+        margin-top: 1rem;
+        i{
+          font-size: 2rem;
+          border-radius: 50%;
+          border: 1px solid rgb(134, 134, 134);
+          padding: .3rem;
+          margin-right: 1rem;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,19 @@
+.about{
+  margin-top: 4rem;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+
+  h5{
+    padding: .5rem .7rem;
+    border: 1px solid rgb(97, 96, 96);
+    border-radius: 2rem;
+    font-size: 1.2rem;
+    font-weight: 400;
+  }
+
+  h3{
+    font-size: 2rem;
+    font-weight: 300;
+  }
+}
