@@ -52,3 +52,23 @@ let prompt = require("prompt-sync")();
 // }
 // console.log(days);
 
+
+// // Promises
+// console.log("HI");
+// const testPromise = new Promise((resolve, reject) => {
+//   const result = 5 + 51;
+
+//   result == 10 ? resolve("Fulfilled") : reject({ message: "error" });
+// });
+
+// testPromise
+//   .then((message) => {
+//     console.log(message);
+//   })
+//   .catch((message) => {
+//     console.log(message);
+//   })
+//   .finally(() => {
+//     console.log("done");
+//   });
+// console.log("Hey");
