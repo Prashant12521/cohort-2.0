@@ -77,29 +77,7 @@ const App = () => {
 
       <div className="px-4 py-10 flex gap-4 flex-wrap">
         {allUsers.map((elem, idx) => {
-          return (
-            <div
-              key={idx}
-              className="lg:w-[23vw] md:w-[30vw] sm:w-[45vw] rounded-xl py-5 px-8 flex flex-col items-center text-center bg-white text-black"
-            >
-              <img
-                className="h-24 w-24 rounded-full object-cover object-center"
-                src={elem.imageURL}
-              />
-              <h1 className="text-2xl mt-2 font-bold">{elem.userName}</h1>
-              <h5 className="text-blue-500 text-lg font-semibold my-2">
-                {elem.userRole}
-              </h5>
-              <p className="text-sm font-medium leading-tight">
-                {elem.userDesc}
-              </p>
-              <button onClick={()=>{
-                deleteHandler(idx)
-              }} className="px-4 py-2 rounded bg-red-600 text-xs cursor-pointer active:scale-95 text-white font-semibold mt-3">
-                Remove
-              </button>
-            </div>
-          );
+          return <Card idx={idx} elem={elem} deleteHandler={deleteHandler}/>
         })}
       </div>
     </div>
