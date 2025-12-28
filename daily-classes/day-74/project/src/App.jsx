@@ -1,11 +1,20 @@
 import React from "react";
 import { useState } from "react";
+import Contact from "./components/Contact";
 
 const App = () => {
   const [name, setName] = useState("");
   const [phone, setPhone] = useState("");
 
   const [allUsers, setAllUsers] = useState([]);
+
+  const deleteHandler = (idx) => {
+    const copyUsers = [...allUsers];
+
+    copyUsers.splice(idx, 1);
+
+    setAllUsers(copyUsers);
+  };
 
   return (
     <div className="h-screen w-screen flex items-center gap-4 justify-between px-10 py-6 bg-black">
@@ -50,25 +59,8 @@ const App = () => {
 
       <div className="h-full w-[60%]">
         {allUsers.map((elem, idx) => {
-          console.log(allUsers);
 
-          return (
-            <div
-              key={idx}
-              className="flex justify-between items-center px-6 py-3 border-2 border-blue-600 rounded-2xl mb-4"
-            >
-              <div className="flex items-center gap-4">
-                <i class="ri-user-3-fill px-2 py-1 rounded-[50%] text-xl bg-amber-50"></i>
-                <div>
-                  <h3 className="text-xl font-semibold text-white">
-                    {elem.name}
-                  </h3>
-                  <span className="text-white">{elem.phone}</span>
-                </div>
-              </div>
-              <i class="ri-phone-fill text-white text-2xl"></i>
-            </div>
-          );
+          return <Contact key={idx} elem={elem} idx={idx} deleteHandler={deleteHandler}/>
         })}
       </div>
     </div>
