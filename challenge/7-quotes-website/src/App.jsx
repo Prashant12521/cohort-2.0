@@ -7,20 +7,17 @@ const App = () => {
 
   const [allQuotes, setAllQuotes] = useState([]);
 
-  const deleteHandler = (idx)=>{
-    
-    const copyAllQuotes = [...allQuotes]
+  const deleteHandler = (idx) => {
+    const copyAllQuotes = [...allQuotes];
 
-    copyAllQuotes.splice(idx,1)
+    copyAllQuotes.splice(idx, 1);
 
-    setAllQuotes(copyAllQuotes)
-
-
-  }
+    setAllQuotes(copyAllQuotes);
+  };
 
   return (
-    <div className="h-screen bg-black flex justify-between p-4">
-      <div className="h-full flex items-end justify-center">
+    <div className="flex h-screen justify-between bg-black p-4">
+      <div className="flex h-full items-end justify-center">
         <form
           onSubmit={(e) => {
             e.preventDefault();
@@ -30,7 +27,7 @@ const App = () => {
             setName("");
             setQuote("");
           }}
-          className="flex flex-col gap-3 min-w-[250px] items-center border rounded-2xl bg-gray-500 p-5"
+          className="flex min-w-[250px] flex-col items-center gap-3 rounded-2xl border bg-gray-500 p-5"
         >
           <input
             value={name}
@@ -39,7 +36,7 @@ const App = () => {
             }}
             type="text"
             placeholder="Write your quote"
-            className="w-full px-8 py-3 rounded-lg bg-gray-100 outline-none focus:ring-2 focus:ring-sky-400"
+            className="w-full rounded-lg bg-gray-100 px-8 py-3 outline-none focus:ring-2 focus:ring-sky-400"
           />
 
           <input
@@ -49,18 +46,24 @@ const App = () => {
             }}
             type="text"
             placeholder="Writer name"
-            className="w-full px-8 py-3 rounded-lg bg-gray-100 outline-none focus:ring-2 focus:ring-sky-400"
+            className="w-full rounded-lg bg-gray-100 px-8 py-3 outline-none focus:ring-2 focus:ring-sky-400"
           />
 
-          <button className="w-fit py-3 px-5 rounded-xl bg-linear-to-b from-gray-600 to-black text-white cursor-pointer active:scale-95 font-medium shadow-md hover:opacity-90 transition">
+          <button className="w-fit cursor-pointer rounded-xl bg-linear-to-b from-gray-600 to-black px-5 py-3 font-medium text-white shadow-md transition hover:opacity-90 active:scale-95">
             Submit
           </button>
         </form>
       </div>
-      <div className="w-[60%] h-full bg-black text-white py-5 px-10 overflow-y-auto flex flex-col gap-3">
-
+      <div className="flex h-full w-[60%] flex-col gap-3 overflow-y-auto bg-black px-10 py-5 text-white">
         {allQuotes.map((elem, idx) => {
-          return <QuotesBox key={idx} elem={elem} idx={idx} deleteHandler={deleteHandler} />
+          return (
+            <QuotesBox
+              key={idx}
+              elem={elem}
+              idx={idx}
+              deleteHandler={deleteHandler}
+            />
+          );
         })}
       </div>
     </div>
