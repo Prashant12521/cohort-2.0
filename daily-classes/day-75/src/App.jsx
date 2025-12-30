@@ -7,7 +7,9 @@ const App = () => {
   const [imageURL, setImageURL] = useState("");
   const [userDesc, setUserDesc] = useState("");
 
-  const [allUsers, setAllUsers] = useState([]);
+  const localUsersData = JSON.parse(localStorage.getItem('cardData')) || []
+
+  const [allUsers, setAllUsers] = useState(localUsersData);
 
   const deleteHandler = (idx)=>{
     const copyUsers = [...allUsers]
@@ -15,6 +17,8 @@ const App = () => {
     copyUsers.splice(idx,1)
 
      setAllUsers(copyUsers)
+
+     localStorage.setItem('cardData', JSON.stringify(copyUsers))
      
   }
 
@@ -24,7 +28,11 @@ const App = () => {
         onSubmit={(e) => {
           e.preventDefault();
 
-          setAllUsers([...allUsers, {userName, userRole, userDesc, imageURL}]);
+          const updatedData = [...allUsers, {userName, userRole, userDesc, imageURL}]
+
+          setAllUsers(updatedData)
+          
+          localStorage.setItem('cardData', JSON.stringify(updatedData))
 
           setUserName("");
           setUserRole("");
