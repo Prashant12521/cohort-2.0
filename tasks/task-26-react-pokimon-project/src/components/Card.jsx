@@ -1,50 +1,52 @@
-import React from 'react'
+import React from "react";
 
-const Card = ({pokemon}) => {
-
+const Card = ({ pokemon }) => {
   console.log(pokemon);
-  
-  
+
   return (
-    <div className="w-fit rounded-2xl bg-green-900 p-4">
-      <div className="relative">
-        <img className="h-60" src={pokemon.sprites.other["official-artwork"].front_default} />
-        <span
-          className="rounded-xl px-2 py-1 text-xl absolute right-0 top-0"
-          style={{ backgroundColor: "red" }}
-        >
-          {pokemon.types[0].type.name}
-        </span>
+    <div className="w-fit rounded-2xl bg-linear-to-b from-red-300 to-blue-300 p-4 transition-all duration-300 ease-in-out hover:scale-[1.05] cursor-pointer">
+      <div className="flex justify-between items-center">
+          <h2 className="font-mono text-2xl font-semibold uppercase">
+            {pokemon.name}
+          </h2>
+          <h5 className="text-red-600 font-bold capitalize border-b-2">
+            {pokemon.types[0].type.name}
+          </h5>
+        </div>
+      <div className="relative backdrop-blur-xl bg-black/10 border border-black/10 rounded-2xl shadow-lg my-4">
+        <img
+          className="h-60"
+          src={pokemon.sprites.other["official-artwork"].front_default}
+        />
       </div>
       <div>
-        <h2 className="font-mono text-2xl font-semibold uppercase">
-          {pokemon.name}
-        </h2>
         <div>
           <div className="flex items-center justify-center gap-2">
             <i className="ri-heart-fill"></i>
             <progress value={pokemon.stats[0].base_stat} max="255"></progress>
-            <span className="text-pink-600">{pokemon.stats[0].base_stat}</span>
+            <span className="text-pink-800 font-bold">{pokemon.stats[0].base_stat}</span>
           </div>
           <div className="flex items-center justify-center gap-2">
             <i className="ri-fire-fill"></i>
             <progress value={pokemon.stats[1].base_stat} max="255"></progress>
-            <span className="text-red-600">{pokemon.stats[1].base_stat}</span>
+            <span className="text-red-900 font-bold">{pokemon.stats[1].base_stat}</span>
           </div>
           <div className="flex items-center justify-center gap-2">
             <i className="ri-shield-star-fill"></i>
             <progress value={pokemon.stats[2].base_stat} max="255"></progress>
-            <span>{pokemon.stats[2].base_stat}</span>
+            <span className="text-purple-800 font-bold">{pokemon.stats[2].base_stat}</span>
           </div>
           <div className="flex items-center justify-center gap-2">
             <i className="ri-flashlight-fill"></i>
             <progress value={pokemon.stats[5].base_stat} max="255"></progress>
-            <span className="text-yellow-600">{pokemon.stats[5].base_stat}</span>
+            <span className="text-blue-900 font-bold">
+              {pokemon.stats[5].base_stat}
+            </span>
           </div>
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default Card
+export default Card;
