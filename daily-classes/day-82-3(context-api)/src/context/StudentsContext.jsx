@@ -3,7 +3,7 @@ import App from "../App";
 
 export const StudentsDataContext = createContext();
 
-const StudentsContext = () => {
+const StudentsContext = ({children}) => {
   const students = [
     {
       id: 1,
@@ -108,7 +108,7 @@ const StudentsContext = () => {
   ];
 
   return <StudentsDataContext.Provider value={students}>
-    <App/>
+    {children}
   </StudentsDataContext.Provider>
 
 }
