@@ -1,0 +1,16 @@
+import React from "react";
+import { createContext } from "react";
+
+export const UserDataContext = createContext();
+
+const UserContext = (props) => {
+  const user = "Sarthak";
+
+  return (
+    <UserDataContext.Provider value={user}>
+      {props.children}
+    </UserDataContext.Provider>
+  );
+};
+
+export default UserContext;
