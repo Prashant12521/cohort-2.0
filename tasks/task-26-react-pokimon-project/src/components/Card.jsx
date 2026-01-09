@@ -1,7 +1,6 @@
 import React from "react";
 
 const Card = ({ pokemon }) => {
-  console.log(pokemon);
 
   return (
     <div className="w-fit rounded-2xl bg-linear-to-b from-red-300 to-blue-300 p-4 transition-all duration-300 ease-in-out hover:scale-[1.05] cursor-pointer">

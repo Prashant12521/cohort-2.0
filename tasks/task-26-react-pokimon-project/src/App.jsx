@@ -5,7 +5,7 @@ import Footer from "./components/Footer";
 
 const App = () => {
   return (
-    <div className="bg-black">
+    <div className="bg-black min-h-screen flex flex-col justify-between">
       <Navbar />
       <Pokemon />
       <Footer />

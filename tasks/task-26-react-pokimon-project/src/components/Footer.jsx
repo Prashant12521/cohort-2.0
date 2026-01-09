@@ -4,7 +4,7 @@ import footer from '../assets/footer.jpg'
 const Footer = () => {
   return (
     <>
-      <img className='min-w-full h-50 object-cover object-center' src={footer} alt="" />
+      <img className='relative bottom-0 min-w-full h-50 object-cover object-center' src={footer} alt="" />
     </>
   )
 }
