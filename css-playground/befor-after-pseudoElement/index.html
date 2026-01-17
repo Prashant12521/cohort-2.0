@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        height: 100vh;
+        background-color: black;
+        color: #fff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+      h1 {
+        position: relative;
+        cursor: pointer;
+      }
+      h1::after {
+        content: "";
+        background: linear-gradient(to right, darkgreen, silver, pink);
+        border-radius: 100px;
+        height: 4px;
+        width: 100%;
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        transition: all 0.3s ease;
+      }
+      h1:hover::after {
+        transform: translateY(5px);
+      }
+    </style>
+  </head>
+  <body>
+    <h1>My Element</h1>
+  </body>
+</html>
