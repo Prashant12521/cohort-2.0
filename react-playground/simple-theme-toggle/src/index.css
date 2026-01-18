@@ -1,0 +1,50 @@
+:root {
+  --bg-color: white;
+  --text-color: black;
+  --btn-color: black;
+  --btn-border: black;
+}
+
+[data-theme='dark']{
+  --bg-color: black;
+  --text-color: white;
+  --btn-color: white;
+  --btn-border: white;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.App{
+  height: 100vh;
+  width: 100%;
+  background-color: var(--bg-color);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.3s linear;
+}
+
+h1{
+  font-size: 5rem;
+  color: var(--text-color);
+}
+
+button{
+  position: absolute;
+  top: 5rem;
+  right: 5rem;
+  border: 1px solid var(--btn-border);
+  padding: 1rem;
+  color: var(--btn-color);
+  border-radius: 50%;
+  background: transparent;
+  cursor: pointer;
+  i{
+    font-size: 3rem;
+  }
+}
