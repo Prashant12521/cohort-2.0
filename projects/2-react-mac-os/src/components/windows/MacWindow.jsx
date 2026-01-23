@@ -2,9 +2,9 @@ import React from "react";
 import { Rnd } from "react-rnd";
 import "./window.scss";
 
-const MacWindow = ({children}) => {
+const MacWindow = ({ children }) => {
   return (
-    <Rnd>
+    <Rnd default={{ width: "80vh", height: "60vh", x: 300, y: 200 }}>
       <div className="window">
         <div className="nav">
           <div className="dots">
@@ -18,9 +18,7 @@ const MacWindow = ({children}) => {
           </div>
         </div>
 
-        <div className="main-content">
-          {children}
-        </div>
+        <div className="main-content">{children}</div>
       </div>
     </Rnd>
   );
