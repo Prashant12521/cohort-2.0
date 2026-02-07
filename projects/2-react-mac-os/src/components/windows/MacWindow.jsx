@@ -2,9 +2,9 @@ import React from "react";
 import { Rnd } from "react-rnd";
 import "./window.scss";
 
-const MacWindow = ({ children }) => {
+const MacWindow = ({ children, width = "40vw", height = "60vh" }) => {
   return (
-    <Rnd default={{ width: "80vh", height: "60vh", x: 300, y: 200 }}>
+    <Rnd default={{ width: width, height: height, x: 300, y: 200 }}>
       <div className="window">
         <div className="nav">
           <div className="dots">
